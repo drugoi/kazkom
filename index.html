@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Мобильный Банкинг</title>
+	
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+	<![endif]-->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ0ZQjzakPeM5pyocVhqj5igvxn0kvw2o&sensor=true"></script>
+	<script>
+		function initialize() {
+	        var mapOptions = {
+	          center: new google.maps.LatLng(76.9662238, 43.2649791),
+	          zoom: 8,
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        var map = new google.maps.Map(document.getElementById("map-canvas"),
+	            mapOptions);
+	      }
+	      google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	
+</head>
+<body>
+	<header data-spy="affix" data-offset-top="0">
+		<div class="b-header__wrapper">
+			<div class="b-logo">
+				<span class="e-logo"></span>
+			</div>
+			<div class="b-enter">
+				<span class="e-enter">
+					<i class="icon-signin icon-light"></i>
+					<span class="e-enter__text">Вход для клиентов</span>
+				</span>
+			</div>
+			<div class="b-contact">
+				<span class="e-telephone">
+					<i class="icon-phone icon-light"></i>
+					<span class="e-telephone__text">
+						<a href="tel:+77273300030">8(727)330 00 30</a>, <a href="tel:+772725851">8(727)25851</a>
+					</span>
+				</span>
+				<span class="e-skype">
+					<i class="icon-skype icon-light"></i>
+					<span class="e-skype__text">
+						<a href="skype:onlinebank_kkb?chat">onlinebank_kkb</a></span>
+				</span>
+			</div>
+			<div class="b-lang">
+				<div class="b-current__lang">
+					<span class="e-current__lang">RU</span>
+					<i class="icon-sort-down icon-light e-lang__icon"></i>
+				</div>
+				<div class="m-lang__switch">
+					<div class="m-lang__list">
+						<div class="m-lang__set" data-lang="KZ">
+							<span class="i-country f-kaz"></span>
+							<span class="e-lang__kz">Қазақша</span>
+						</div>
+						<div class="m-lang__set" data-lang="EN">
+							<span class="i-country f-eng"></span>
+							<span class="e-lang__en">English</span>
+						</div>
+						<div class="m-lang__set" data-lang="RU">
+							<span class="i-country f-rus"></span>
+							<span class="e-lang__ru active">По Русски</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container" id="main">
+		<ul id="scene" data-calibrate-x="true" data-calibrate-y="true" data-limit-x="false" data-limit-y="0.1" data-friction-x="0.1" data-friction-y="0.1">
+          <li class="layer" data-depth="0.25"><img src="img/parallax/b-mountain.png"></li>
+          <li class="layer" data-depth="0.50"><img src="img/parallax/b-clouds.png"></li>
+          <li class="layer" data-depth="0.75"><img src="img/parallax/b-building.png"></li>
+          <li class="layer" data-depth="1.00"><img src="img/parallax/b-road.png"></li>
+        </ul>
+        <div class="b-welcome__wrapper">
+				<div class="b-call__bubble">
+				<span class="e-call__annotate">
+					<h1>ЗАКАЖИТЕ ЗВОНОК!</h1>
+					<h3>и к вам позвонит специалист для консультации!</h3>
+				</span>
+				<input type="text" class="e-call__me" placeholder="8 ___ ___ ____">
+				<button class="e-book__call">Заказать звонок</button>
+			</div>
+				<div class="b-annotate__info">
+				<div class="b-annotate__wrapper">
+					<p>Mobilebank — банковская услуга от АО «Казкоммерцбанк» для индивидуальных предпринимателей и юридических лиц, позволяет Клиентам иметь доступ к счетам и операциям в национальной валюте, посредством сети Интернет и отправки SMS с мобильного телефона на короткий номер</p>
+					<span class="e-short__number">4343</span>
+					<span class="e-support__carrier">Поддерживаемые операторы сотовой связи на территории Казахстана – Kcell/Activ, Beeline, Tele2/Neo, Dalacom.</span>
+				</div>
+			</div>
+		</div>
+		<div class="b-menu">
+			<div class="b-menu__wrapper">
+				<ul class="b-menu__list">
+					<li class="e-welcome__item active">
+						<span class="e-item__icon connect"></span>
+						<span class="e-item__title">Подключение</span>
+					</li>
+					<li class="e-welcome__item">
+						<span class="e-item__icon bankomat"></span>
+						<span class="e-item__title">Банкоматы</span>
+					</li>
+					<li class="e-welcome__item">
+						<span class="e-item__icon branches"></span>
+						<span class="e-item__title">Отделения</span>						
+					</li>
+					<li class="e-welcome__item">
+						<span class="e-item__icon sms"></span>
+						<span class="e-item__title">SMS-команды</span>						
+					</li>
+					<li class="e-welcome__item">
+						<span class="e-item__icon rates"></span>
+						<span class="e-item__title">Тарифы</span>						
+					</li>
+					<li class="e-welcome__item">
+						<span class="e-item__icon demo"></span>
+						<span class="e-item__title">Демонстрация</span>						
+					</li>
+				</ul>
+				<div class="b-menu__items">
+					<div class="b-menu__item map">
+						 <div id="map-canvas" style="width: 100%;height: 100%;"></div>
+					</div>
+					<div class="b-menu__item demo" style="display:none;">
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/OBWc1Jy2swE?list=PLF8056926C0FEE207" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="b-advantages">
+			<div class="b-advantages__wrapper">
+				<span class="e-advantages__title">
+					Преимущества
+				</span>
+				<div class="b-advantages__text">
+					<p class="e-advantages__text">
+						КАЗКОМ имеет самую крупную сеть банкоматов по Казахстану. Мы первые ввели мультивалютные банкоматы системы Cash-in. Перевести наличные на карту в течении 5 минут без очерей стало возможно благодаря мультивалютным банкоматам системы Cash-in.
+					</p>
+					<p class="e-advantages__text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ipsam qui quaerat deleniti eaque aut aperiam! Similique earum fuga illo distinctio officia quasi excepturi vel quos reprehenderit hic veniam fugiat. Harum magni voluptatem iusto obcaecati inventore commodi illo velit expedita saepe quisquam a quos molestiae officiis voluptatum hic explicabo facilis tempora ea nostrum corporis corrupti esse illum maiores asperiores quibusdam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ea fugit tempore expedita accusantium enim officia dolor magni minus vel veniam minima. Nobis fugit minima aut aperiam neque distinctio rem!
+					</p>
+				</div>
+				<span class="b-advantages__bkg"></span>
+			</div>
+		</div>
+		<div class="b-reviews">
+			<div class="b-reviews__wrapper">
+				<span class="e-reviews__title">Отзывы от клиентов</span>
+				<div class="b-reviews__slider active" data-slider="1">
+					<div class="e-slider__name">Лариса Ивановна</div>
+						<img src="img/b-review__photo.png" alt="" class="e-slider__photo">
+					<span class="e-slider__description">
+						<span class="e-description__title">Главный бухгалтер АО «Казахтелеком»</span>
+						<p class="e-description__text">
+							С системой мобильного банка мы сократили свои расходы на посищениях банк. Удобный доступ позволяет максимально повысить работоспособность нашего персонала. Спасибо ДИТу!
+						</p>
+					</span>
+				</div>
+				<div class="b-reviews__slider" data-slider="2">
+					<div class="e-slider__name">Лариса Ивановна</div>
+						<img src="img/b-review__photo.png" alt="" class="e-slider__photo">
+					<span class="e-slider__description">
+						<span class="e-description__title">Главный бухгалтер АО «Казахтелеком»</span>
+						<p class="e-description__text">
+							С системой мобильного банка мы сократили свои расходы на посещениях банк. Удобный доступ позволяет максимально повысить работоспособность нашего персонала. Спасибо ДИТу!
+						</p>
+					</span>
+				</div>
+				<div class="b-reviews__slider" data-slider="3">
+					<div class="e-slider__name">Лариса Ивановна</div>
+						<img src="img/b-review__photo.png" alt="" class="e-slider__photo">
+					<span class="e-slider__description">
+						<span class="e-description__title">Главный бухгалтер АО «Казахтелеком»</span>
+						<p class="e-description__text">
+							С системой мобильного банка мы сократили свои расходы на посищениях банк. Удобный доступ позволяет максимально повысить работоспособность нашего персонала. Спасибо ДИТу!
+						</p>
+					</span>
+				</div>
+				<div class="b-reviews__slider" data-slider="4">
+					<div class="e-slider__name">Лариса Ивановна</div>
+						<img src="img/b-review__photo.png" alt="" class="e-slider__photo">
+					<span class="e-slider__description">
+						<span class="e-description__title">Главный бухгалтер АО «Казахтелеком»</span>
+						<p class="e-description__text">
+							С системой мобильного банка мы сократили свои расходы на посищениях банк. Удобный доступ позволяет максимально повысить работоспособность нашего персонала. Спасибо ДИТу!
+						</p>
+					</span>
+				</div>
+				<div class="m-slider__nav">
+					<i class="m-slider__control active" data-slide="1"></i>
+					<i class="m-slider__control" data-slide="2"></i>
+					<i class="m-slider__control" data-slide="3"></i>
+					<i class="m-slider__control" data-slide="4"></i>
+				</div>
+			</div>
+		</div>
+		<div class="b-specials">
+			<div class="b-specials__wrapper">
+				<span class="e-specials__title">полезные сервисы и услуги</span>
+				<span class="m-specials__slide left"></span>
+				<span class="m-specials__slide right"></span>
+				<div class="b-specials__slider active" data-slider="5">
+					<div class="b-specials__slide one">
+						<img src="img/b-gocard.png" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate">Бонусная карточка — это новый платежный инструмент Казкоммерцбанка, позволяющий вам не только тратить средства, которые дает банк, но еще и зарабатывать на этом. </div>
+					</div>
+					<div class="b-specials__slide two">
+						<img src="img/b-homebank.png" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate">Homebank позволяет держателям карточек удобно, быстро и безопасно контролировать свои счета, совершать переводы, оплачивать налоги и услуги различных поставщиков услуг, а также многое другое.</div>
+					</div>
+				</div>
+				<div class="b-specials__slider" data-slider="6">
+					<div class="b-specials__slide one">
+						<img src="img/b-gocard.png" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate">Бонусная карточка — это новый платежный инструмент Казкоммерцбанка, позволяющий вам не только тратить средства, которые дает банк, но еще и зарабатывать на этом. </div>
+					</div>
+					<div class="b-specials__slide two">
+						<img src="img/b-homebank.png" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate">Homebank позволяет держателям карточек удобно, быстро и безопасно контролировать свои счета, совершать переводы, оплачивать налоги и услуги различных поставщиков услуг, а также многое другое.</div>
+					</div>
+				</div>
+				<div class="b-specials__slider" data-slider="7">
+					<div class="b-specials__slide one">
+						<img src="" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate"></div>
+					</div>
+					<div class="b-specials__slide two">
+						<img src="" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate"></div>
+					</div>
+				</div>
+				<div class="b-specials__slider" data-slider="8">
+					<div class="b-specials__slide one">
+						<img src="" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate"></div>
+					</div>
+					<div class="b-specials__slide two">
+						<img src="" alt="" class="e-specials__logo">
+						<div class="e-specials__annotate"></div>
+					</div>
+				</div>
+				<div class="m-specials__nav">
+					<i class="m-specials__control active" data-slide="5"></i>
+					<i class="m-specials__control" data-slide="6"></i>
+					<i class="m-specials__control" data-slide="7"></i>
+					<i class="m-specials__control" data-slide="8"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="b-footer__wrapper">
+			<div class="b-footer__columns">
+				<span class="b-footer__logo"></span>
+				<div class="b-footer__contact">
+					<span class="e-contact__title">Техническая поддержка:</span>
+					<span>
+						<i class="icon-phone icon-light"></i>
+						<span class="e-footer__telephone">8 (727) 330 00 30, 8 (727) 258 51 42</span>
+					</span>
+					<span>
+						<i class="icon-skype icon-light"></i>
+						<span class="e-footer__skype">onlinebank_kkb</span>
+					</span>
+					<span>
+						<i class="icon-envelope-alt icon-light"></i>
+						<span class="e-footer__mail">support@onlinebank.lz</span>
+					</span>
+				</div>
+				<div class="b-footer__social">
+					<span class="icon-stack">
+						<i class="icon-circle icon-stack-base"></i>
+						<i class="icon-twitter icon-large e-footer__icons"></i>
+					</span>
+					<span class="icon-stack">
+						<i class="icon-circle icon-stack-base"></i>
+						<i class="icon-facebook icon-large e-footer__icons"></i>
+					</span>
+					<span class="icon-stack">
+						<i class="icon-circle icon-stack-base"></i>
+						<i class="icon-youtube icon-large e-footer__icons"></i>
+					</span>
+					<span class="icon-stack">
+						<i class="icon-circle icon-stack-base"></i>
+						<i class="icon-vk icon-large e-footer__icons"></i>
+					</span>
+				</div>
+			</div>
+			<div class="b-footer__columns">
+				<span class="e-footer__list__title">О проекте</span>
+				<ul class="b-footer__list">
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Подключение</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Обучение</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Документы</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Тарифы</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Вопросы и ответы</a>
+					</li>
+				</ul>
+			</div>
+			<div class="b-footer__columns">
+				<span class="e-footer__list__title">Полезное</span>
+				<ul class="b-footer__list">
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Банкоматы</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Отделения</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Сертификат</a>
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i><a href="#">Драйвер для ЭЦП</a>
+					</li>
+				</ul>
+			</div>
+			<div class="b-footer__columns">
+				<span class="e-footer__list__title">Языки</span>
+				<ul class="b-footer__list">
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i>Русский
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i>
+							English
+					</li>
+					<li class="e-footer__items">
+						<i class="icon-angle-right icon-large"></i>
+							Қазақша
+					</li>
+				</ul>
+			</div>
+			<div class="b-footer__columns">
+				<span class="e-get__up">
+					<i class="icon-circle-arrow-up icon-large"></i>Наверх
+				</span>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			/* Scroll Header */
+            $('header').affix({offset: {top: 0}});
+		
+			/* Lang Switching */ 
+			$('.b-current__lang').on('click', function() {
+				if ($(this).hasClass('active')) {
+					$('.m-lang__switch').fadeOut();
+					$(this).removeClass('active');
+				} else {
+					$(this).addClass('active');
+					$('.m-lang__switch').fadeIn();	
+				}
+			});
+			
+			$('.m-lang__set').on('click', function() {
+				var lang = $(this).data('lang');
+				$('.m-lang__switch').fadeOut();
+				$('.e-current__lang').text(lang);
+			});
+		
+			$(".e-call__me").mask("8 999 999 9999");
+			$('.e-book__call').on('click', function() {
+				console.log($(".e-call__me").val());
+			});
+			$('.e-get__up').on('click', function(){
+				$('html, body').animate( { scrollTop: 0 }, 800 );
+			});
+			/* Menu Items */
+			$('.e-welcome__item').on('click', function() {
+				if ($(this).hasClass('active')) {
+					return false;
+				} else {
+					$('.e-welcome__item').removeClass('active');
+					$(this).addClass('active');
+				}
+			}); 
+			
+			/* Slider for Reviews Block */
+			$('.m-slider__control').on('click', function() {
+				if ($(this).hasClass('active')) {
+					return false;
+				} else {
+					$('.m-slider__control, .b-reviews__slider').removeClass('active');
+					$(this).addClass('active');
+					var slideNum = $(this).data('slide');	
+					$('.b-reviews__slider[data-slider="'+ slideNum +'"]').addClass('active').fadeIn();
+				}
+			});
+			/* Slider for Specials Block */
+			$('.m-specials__control').on('click', function() {
+				if ($(this).hasClass('active')) {
+					return false;
+				} else {
+					$('.m-specials__control, .b-specials__slider').removeClass('active');
+					$(this).addClass('active');
+					var slideNum = $(this).data('slide');	
+					$('.b-specials__slider[data-slider="'+ slideNum +'"]').addClass('active').fadeIn(800);
+				}
+			});
+			$('#scene').parallax();
+			$(window).resize(function() {
+				$('#scene').parallax();
+			});
+		});
+ 	</script>
+</body>
+</html>
