@@ -531,14 +531,20 @@ header.affix {
 }
 
 .b-menu__items {
-    background: rgba(0, 0, 0, 0.9);
+    background: #f0ede4;
     float: left;
     width: 100%;
 }
 
 .b-menu__item {
     height: 460px;
-    width: 975px; margin: 0 auto;
+    width: 975px; 
+    margin: 0 auto;
+}
+
+.b-menu__item.map {
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer Block */

@@ -17,8 +17,8 @@
 	<script>
 		function initialize() {
 	        var mapOptions = {
-	          center: new google.maps.LatLng(76.9662238, 43.2649791),
-	          zoom: 8,
+	          center: new google.maps.LatLng(43.2775, 76.895833),
+	          zoom: 11,
 	          mapTypeId: google.maps.MapTypeId.ROADMAP
 	        };
 	        var map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -104,36 +104,36 @@
 		<div class="b-menu">
 			<div class="b-menu__wrapper">
 				<ul class="b-menu__list">
-					<li class="e-welcome__item active">
+					<li class="e-welcome__item" data-menu="connect">
 						<span class="e-item__icon connect"></span>
 						<span class="e-item__title">Подключение</span>
 					</li>
-					<li class="e-welcome__item">
+					<li class="e-welcome__item active" data-menu="bank_map">
 						<span class="e-item__icon bankomat"></span>
 						<span class="e-item__title">Банкоматы</span>
 					</li>
-					<li class="e-welcome__item">
+					<li class="e-welcome__item" data-menu="branch_map">
 						<span class="e-item__icon branches"></span>
 						<span class="e-item__title">Отделения</span>						
 					</li>
-					<li class="e-welcome__item">
+					<li class="e-welcome__item" data-menu="sms">
 						<span class="e-item__icon sms"></span>
 						<span class="e-item__title">SMS-команды</span>						
 					</li>
-					<li class="e-welcome__item">
+					<li class="e-welcome__item" data-menu="rates">
 						<span class="e-item__icon rates"></span>
 						<span class="e-item__title">Тарифы</span>						
 					</li>
-					<li class="e-welcome__item">
+					<li class="e-welcome__item" data-menu="demo">
 						<span class="e-item__icon demo"></span>
 						<span class="e-item__title">Демонстрация</span>						
 					</li>
 				</ul>
 				<div class="b-menu__items">
-					<div class="b-menu__item map">
+					<div class="b-menu__item map" data-item="bank_map">
 						 <div id="map-canvas" style="width: 100%;height: 100%;"></div>
 					</div>
-					<div class="b-menu__item demo" style="display:none;">
+					<div class="b-menu__item demo" style="display:none;" data-item="demo">
 						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/OBWc1Jy2swE?list=PLF8056926C0FEE207" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
@@ -390,11 +390,15 @@
 			});
 			/* Menu Items */
 			$('.e-welcome__item').on('click', function() {
+				var menu_item = $(this).data('menu');
+				
 				if ($(this).hasClass('active')) {
 					return false;
 				} else {
 					$('.e-welcome__item').removeClass('active');
 					$(this).addClass('active');
+					$('.b-menu__item').fadeOut(200);
+					$('.b-menu__item[data-item="'+ menu_item +'"]').fadeIn(300);
 				}
 			}); 
 			
