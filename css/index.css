@@ -912,3 +912,22 @@ footer {
 .m-specials__control.active {
     background: rgba(0, 0, 0, 0) url(../img/m-special_nav.png);
 }
+
+.b-license {
+    clear: both;
+    float: left;
+}
+.b-license__logo {
+    background: url(../img/kkb__logo-b.png);
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+.b-license__text {
+    font-size: 11px;
+}
+.b-copyright {
+    font-size: 11px;
+    float: right;
+    margin-top: 22px;
+}
