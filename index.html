@@ -13,7 +13,7 @@
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
 	<![endif]-->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ0ZQjzakPeM5pyocVhqj5igvxn0kvw2o&sensor=true"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ0ZQjzakPeM5pyocVhqj5igvxn0kvw2o&sensor=false"></script>
 	<script>
 		function initialize() {
 	        var mapOptions = {
@@ -70,7 +70,7 @@
 						</div>
 						<div class="m-lang__set" data-lang="RU">
 							<span class="i-country f-rus"></span>
-							<span class="e-lang__ru active">По Русски</span>
+							<span class="e-lang__ru active">На русском</span>
 						</div>
 					</div>
 				</div>
@@ -141,7 +141,46 @@
 						<span class="e-get__contract">Скачать договор</span>
 					</div>
 					<div class="b-menu__item map" data-item="bank_map">
-						 <div id="map-canvas" style="width: 100%;height: 100%;"></div>
+						<div id="map-canvas"></div>
+					</div>
+					<div class="b-menu__item map" data-item="branch_map">
+						 <div id="branch_map" style="width: 100%;height: 460px;"></div>
+					</div>
+					<div class="b-menu__item rate" data-item="rates">
+						<span class="e-rates__title">Тарифы системы "Mobilebank"</span>
+						<span class="e-rates__subtitle__main">Дистанционное обслуживание клиентов</span>
+						<p class="e-rates__annotation">Для клиентов - юридических лиц, филиалов и представительств юридических лиц, а также крестьянских хозяйств и индивидуальных предпринимателей нотариусам и адвокатам, частным судебным исполнителям.</p>
+						<div class="b-rates">
+							<div class="b-rates__left">
+								<div class="b-rates__info">
+									<p class="e-rates__annotate first">Подключение системы"Mobilebank" (без учета НДС)</p>
+								</div>
+								<div class="b-rates__info">
+									<p class="e-rates__annotate">Ежемесячная абонентская плата за ведение счетов электронных клиентов с использованием системы "Mobilebank"</p>
+									<p class="e-rates__subtitle">Взимается дополнительно к стандартной комиссии за ведение счетов.</p>
+								</div>
+								<div class="b-rates__info">
+									<p class="e-rates__annotate">Комиссия за проведение запросов, переводов, уведомлений и предоставление выписки 	по банковскому счету на основании SMS-сообщений.</p>
+									<p class="e-rates__subtitle">Взимается по каждой операции/представленной выписке дополнительно к стандартным комиссиям  за соответствующую услугу.</p>
+									</div>
+							</div>
+							<div class="b-rates__right">
+								<div class="b-rates__price">
+									<span class="e-price__quantity">0</span>
+									<span class="e-price__annotate">тенге</span>
+								</div>
+								<div class="b-rates__price">
+									<span class="e-price__quantity">530</span>
+									<span class="e-price__annotate">тенге</span>
+								</div>
+								<div class="b-rates__price">
+									<span class="e-price__quantity">7</span>
+									<span class="e-price__annotate">тенге</span>
+								</div>
+							</div>
+						</div>
+						<span class="e-rates__common">Базовые тарифы утверждены согласно Протокола №12.1 Совета Директоров от 07.12.2012 г.C учетом изменений и дополнений согласно протокола №8.3 от 19.08.2013 года.</span>
+						<a href="#!" class="e-rates__clients">Переводы модемных клиентов</a>
 					</div>
 					<div class="b-menu__item demo" style="display:none;" data-item="demo">
 						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/OBWc1Jy2swE?list=PLF8056926C0FEE207" frameborder="0" allowfullscreen></iframe>
@@ -398,6 +437,7 @@
 				var lang = $(this).data('lang');
 				$('.m-lang__switch').fadeOut();
 				$('.e-current__lang').text(lang);
+				$('.b-current__lang').removeClass('active');
 			});
 		
 			$(".e-call__me").mask("8 999 999 9999");
