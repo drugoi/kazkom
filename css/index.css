@@ -540,11 +540,79 @@ header.affix {
     height: 460px;
     width: 975px; 
     margin: 0 auto;
+    background: #054264;
+    display: none;
 }
 
 .b-menu__item.map {
     width: 100%;
     height: 100%;
+}
+
+.b-menu__item.connect {
+    width: 100%;
+}
+
+/* Block: Connect New User */
+.e-connect__title {
+	color: #aa9f71;
+	font-size: 39px;
+	display: block;
+	padding-top: 15px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.e-connect__subtitle {
+	color: #aa9f71;
+	font-size: 20px;
+	text-align: center;
+	line-height: 30px;
+	display: block;
+	/* text-transform: uppercase; */
+}
+
+.b-connect__items {
+    width: 910px;
+    height: 300px;
+    margin: 20px auto -10px;
+}
+
+.b-connect__item {
+	display: block;
+	width: 270px;
+	height: 255px;
+	float: left;
+	margin-left: 30px;
+}
+
+.b-connect__item.print {
+    background: rgba(0, 0, 0, 0) url(../img/connect/b-connect_print.png) no-repeat center center;
+}
+.b-connect__item.contract {
+    background: rgba(0, 0, 0, 0) url(../img/connect/b-connect_send.png) no-repeat center center;
+}
+.b-connect__item.enjoy {
+    background: rgba(0, 0, 0, 0) url(../img/connect/b-connect_finish.png) no-repeat center center;
+}
+
+.e-get__contract {
+    display: block;
+    margin: 0 auto;
+    background: transparent url(../img/b-enter__button.png) no-repeat center center;
+    width: 165px;  
+    height:38px;
+    font-size: 13px;
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    line-height: 32px;
+}
+.e-get__contract:hover {
+    background: rgba(0, 0, 0, 0) url(../img/b-enter__button_hover.png) no-repeat center 1px;
+}
+.e-get__contract:active {
+    background: rgba(0, 0, 0, 0) url(../img/b-enter__button_active.png) no-repeat center -4px;
 }
 
 /* Footer Block */
