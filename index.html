@@ -90,7 +90,7 @@
 					<h1>ЗАКАЖИТЕ ЗВОНОК!</h1>
 					<h3>и к вам позвонит специалист для консультации!</h3>
 				</span>
-				<input type="text" class="e-call__me" placeholder="8 ___ ___ ____">
+				<input type="text" class="e-call__me" placeholder="8 (___) ___ ____">
 				<button class="e-book__call">Заказать звонок</button>
 			</div>
 				<div class="b-annotate__info">
@@ -440,9 +440,11 @@
 				$('.b-current__lang').removeClass('active');
 			});
 		
-			$(".e-call__me").mask("8 999 999 9999");
+			$(".e-call__me").mask("8 (999) 999 9999");
 			$('.e-book__call').on('click', function() {
 				console.log($(".e-call__me").val());
+				$('.b-call__bubble').addClass('active');
+				$('.b-call__bubble.active > *').fadeOut(100);
 			});
 			$('.e-get__up').on('click', function(){
 				$('html, body').animate( { scrollTop: 0 }, 800 );
