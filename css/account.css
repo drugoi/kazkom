@@ -38,13 +38,25 @@
     float: left;
     border-bottom: 1px solid #d1d4d3;
 }
-.b-contact__wrapper {
+.b-head-contact__wrapper {
     clear: both;
     background: #f9f9f9;
     width: 100%;
-    margin:0 auto;
 }
-
+.b-head-contact {
+    margin:0 auto;
+    max-width: 1033px;
+    height: 50px;
+    width: 100%;
+    clear: both;
+}
+.e-head-telephone__text,
+.e-head-skype__text,
+.e-head-mail__text {
+    margin-left: 5px;
+    font-size: 13px;
+    color: #4d5357;
+}
 
 
 
