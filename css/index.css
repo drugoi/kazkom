@@ -128,7 +128,7 @@ header.affix .b-header__wrapper {
 
 .e-logo {
 	position:relative;
-	top:35px;
+	top: 38px;
 	left:36px;
 	display:block;
 	float:left;
@@ -140,6 +140,7 @@ header.affix .b-header__wrapper {
 header.affix .e-logo {
 	height: 45px;
 	background-position: center 0px;
+	top: 35px;
 }
 .e-enter {
 	position:relative;
@@ -147,12 +148,12 @@ header.affix .e-logo {
 	display:block;
 	float:left;
 	margin:0 0 0 100px;
-/* padding-right: 30px; */
+
 	width:165px;
 	height:38px;
-/* background:#24740f url(../img/i__enter.png) no-repeat 10px center; */
+
 	background:transparent url(../img/b-enter__button.png) no-repeat center center;
-/* box-shadow: 2px 4px 1px #185108; */
+
 	color:#FFF;
 	text-align:center;
 	font-weight:600;
@@ -403,20 +404,26 @@ header.affix .e-logo {
 	top:100px;
 	display:block;
 	margin:0 auto;
-	width:185px;
-	height:35px;
+	width:184px;
+	height:38px;
 	border:none;
 	background:#1A77BB;
-	box-shadow:1px 1px 1px #1A77B2;
+/* 	box-shadow:1px 1px 1px #1A77B2; */
+	background: url(../img/b-send__button.png);
 	color:#FFF;
 	font-size:15px;
 	font-family:'Open Sans',sans-serif,Arial;
 	cursor:pointer;
 }
 
+.e-book__call:hover {
+	background: url(../img/b-send__button_hover.png);
+}
+
 .e-book__call:active {
 	outline:none;
-	box-shadow:inset 2px 2px 9px #1A77B2;
+/* 	box-shadow:inset 2px 2px 9px #1A77B2; */
+	background: url(../img/b-send__button_active.png);
 }
 
 .e-book__call:focus {
@@ -468,7 +475,7 @@ header.affix .e-logo {
 
 .b-menu__wrapper {
 	width:100%;
-	height:570px;
+	height: 682px;
 	background:#fff;
 }
 
@@ -540,12 +547,14 @@ header.affix .e-logo {
 .e-item__icon.rates {
 	width:65px;
 	height: 50px;
+	margin-bottom: 36px;
 	background: rgba(0, 0, 0, 0) url(../img/b-menu/i-rates.png) no-repeat center center;
 }
 
 .e-item__icon.demo {
-	width:70px;
+	width: 63px;
 	height:46px;
+	margin-bottom: 39px;
 	background:transparent url(../img/b-menu/i-video.png);
 }
 
@@ -563,10 +572,11 @@ header.affix .e-logo {
 
 .b-menu__item {
 	display:none;
-	margin:0 auto;
+	margin: 0 auto;
 	width:975px;
+	padding: 40px 0;
 	height:460px;
-	background:#054264;
+	background: #007ea3;
 }
 
 .b-menu__item.map {
@@ -576,6 +586,11 @@ header.affix .e-logo {
 .b-menu__item.rate {
     width: 100%;
     background: #d1d4d3;
+}
+
+.b-menu__item.sms {
+    background: #DBCEAC url(../img/b-sms__bkg.png);
+    width: 100%;
 }
 
 #map-canvas {
@@ -638,7 +653,7 @@ header.affix .e-logo {
 	margin:0 auto;
 	width:165px;
 	height:38px;
-	background:transparent url(../img/b-enter__button.png) no-repeat center center;
+	background:transparent url(../img/b-contract__button.png) no-repeat center center;
 	color:#FFF;
 	text-align:center;
 	font-weight:600;
@@ -647,11 +662,11 @@ header.affix .e-logo {
 }
 
 .e-get__contract:hover {
-	background:rgba(0,0,0,0) url(../img/b-enter__button_hover.png) no-repeat center 1px;
+	background:rgba(0,0,0,0) url(../img/b-contract__button_hover.png) no-repeat center 1px;
 }
 
 .e-get__contract:active {
-	background:rgba(0,0,0,0) url(../img/b-enter__button_active.png) no-repeat center -4px;
+	background:rgba(0,0,0,0) url(../img/b-contract__button_active.png) no-repeat center -4px;
 }
 
 /* Block: Rates */
@@ -777,14 +792,14 @@ footer {
 	font-size:13px;
 }
 
-.b-footer__columns {
+.b-footer__column {
 	position:relative;
 	float:left;
 	margin-top:30px;
 	width:200px;
 }
 
-.b-footer__columns:nth-child(1) {
+.b-footer__column:nth-child(1) {
 	width:310px;
 	height:210px;
 }
@@ -904,14 +919,35 @@ footer {
 
 .b-advantages__wrapper {
 	display:block;
-	clear:both;
 	margin:0 auto;
+	padding: inherit;
 	max-width:785px;
 	width:100%;
 	height:100%;
 }
 
 .e-advantages__title {
+    color: #004165;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.e-advantages__list {
+    margin-bottom: 20px;
+}
+
+.e-advantages__item {
+    color: #4d5357;
+    font-size: 13px;
+}
+
+.e-icon__advantages {
+    color: #287319;
+    margin-right: 9px;
+}
+
+.e-advantages__title--global {
 	display:block;
 	padding-top:45px;
 	color:#007ea3;
@@ -926,7 +962,7 @@ footer {
 /* float: left; */
 	padding-top:25px;
 	padding-bottom:30px;
-	width:400px;
+	width: 470px;
 }
 
 .e-advantages__text {
@@ -954,18 +990,19 @@ footer {
 
 /* Block: Reviews */
 .b-reviews {
-	height:520px;
+	height: 540px;
 	background:#007EA3 url(../img/b-reviews__bkg.png);
 }
 
 .b-reviews__wrapper {
 	margin:0 auto;
 	width:1033px;
+	padding: 40px 0;
 }
 
 .e-reviews__title {
 	display:block;
-	padding-top:40px;
+	/* padding-top:40px; */
 	color:#FFF;
 	text-align:center;
 	text-transform:uppercase;
@@ -1141,4 +1178,120 @@ footer {
 
 .m-specials__control.active {
 	background:rgba(0,0,0,0) url(../img/m-special_nav.png);
+}
+/* Block: SMS Hints */
+.b-sms__wrapper {
+    margin: 0 auto;
+    width: 1030px;
+}
+
+.b-sms__info--wrapper {
+    margin-top: 35px;
+    float: left;
+}
+
+.b-sms__title {
+    color: #004164;
+    text-transform: uppercase;
+    font-size: 39px;
+    text-align: center;
+    display: block;
+}
+
+
+
+.b-sms__menu {
+    float: left;
+    height: 320px;
+    width: 150px;
+}
+
+.e-sms__menu--item {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    height: 36px;
+    padding-left: 25px;
+    line-height: 36px;
+    background: #004164;
+    border-bottom: 1px solid #000;
+    border-right: 5px solid #005e91;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.e-sms__menu--item:hover {
+    background: #0075b5;
+}
+
+.b-sms__info {
+    float: left;
+    width: 380px;
+    height: 324px;
+    background: #a89e6f;
+}
+
+.b-sms__info--item {
+	display: none;
+	font-size: 12px; 
+	color: #FFF; 
+	font-weight: lighter;
+}
+
+.b-sms__info--item.active {
+	display: block;
+}
+
+.b-sms__info--item.active > span {
+    margin: 20px 30px;
+}
+
+.e-sms__info--title {
+    font-weight: bold;
+    display: block;
+}
+
+.e-sms__info--variation {
+    display: block;
+}
+
+.e-sms__variation--title {
+    font-weight: bold;
+}
+
+.e-sms__variation--text {
+}
+
+.e-sms__info--order {
+    display: block;
+}
+
+.e-sms__order--title {
+    font-weight: bold;
+}
+
+.e-sms__order--text {
+}
+
+.e-sms__info--sample {
+    display: block;
+}
+
+.e-sms__sample--title {
+    font-weight: bold;
+}
+
+.e-sms__sample--text {
+}
+
+.e-sms__mobile {
+	display: block;
+	background: rgba(0, 0, 0, 0) url(../img/b-sms__mobile.png) center center no-repeat;
+	background-size: contain;
+	width: 322px;
+	height: 453px;
+	float: right;
 }

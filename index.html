@@ -13,18 +13,25 @@
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
 	<![endif]-->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ0ZQjzakPeM5pyocVhqj5igvxn0kvw2o&sensor=false"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ0ZQjzakPeM5pyocVhqj5igvxn0kvw2o&sensor=true"></script>
 	<script>
-		function initialize() {
-	        var mapOptions = {
-	          center: new google.maps.LatLng(43.2775, 76.895833),
-	          zoom: 11,
-	          mapTypeId: google.maps.MapTypeId.ROADMAP
-	        };
-	        var map = new google.maps.Map(document.getElementById("map-canvas"),
-	            mapOptions);
-	      }
-	      google.maps.event.addDomListener(window, 'load', initialize);
+	      var map;
+			function initialize() {
+			  var mapOptions = {
+			    zoom: 12,
+			    scrollwheel: false,
+			    center: new google.maps.LatLng(43.2775, 76.895833),
+			    mapTypeId: google.maps.MapTypeId.ROADMAP
+			  };
+			  map = new google.maps.Map(document.getElementById('map-canvas'),
+			      mapOptions);
+/*
+			       map.setCenter(location);
+			       google.maps.event.trigger(map, 'resize');
+*/
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
 	
 </head>
@@ -146,6 +153,162 @@
 					<div class="b-menu__item map" data-item="branch_map">
 						 <div id="branch_map" style="width: 100%;height: 460px;"></div>
 					</div>
+					<div class="b-menu__item sms" data-item="sms">
+						<div class="b-sms__wrapper">
+							<span class="b-sms__title">смс команды и описание</span>
+							<div class="b-sms__info--wrapper">
+								<div class="b-sms__menu">
+								<span class="e-sms__menu--item" data-type="help">help</span>
+								<span class="e-sms__menu--item" data-type="balance">balance</span>
+								<span class="e-sms__menu--item" data-type="language">language</span>
+								<span class="e-sms__menu--item" data-type="transact">transact</span>
+								<span class="e-sms__menu--item" data-type="payment">payment</span>
+								<span class="e-sms__menu--item" data-type="wakeup">wakeup</span>
+								<span class="e-sms__menu--item" data-type="sleep">sleep</span>
+								<span class="e-sms__menu--item" data-type="go">go</span>
+								<span class="e-sms__menu--item" data-type="auto">auto</span>
+							</div>
+								<div class="b-sms__info">
+									<div class="b-sms__info--item active" data-property="help">
+										<span class="e-sms__info--title">Информация о командах и их возможностях</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">HELP, H, HLP</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды, пробел, ввод наименования команды</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">H [наименование команды]</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="balance">
+										<span class="e-sms__info--title">Информация о фактическом остатке на текущем счете</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">B, BAL, BALANCE</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Для просмотра остатков всех подвязанных счетов достаточно ввести в тексте sms один из вариантов команды. Для просмотра остатка по конкретному счету нужно ввести один из вариантов команды пробел, ввод маскированного кода текущего счета </span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">B [маскированный код счета]</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="language">
+										<span class="e-sms__info--title">Возможность смены языка информационных sms-сообщений</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">LANGUAGE, LANG, L</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды, пробел, ввод языка RU-русский, RUTR-русский транслит, EN-английский, KKTR-казахский транслит</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">L [RU/RUTR/EN/KKTR]</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="transact">
+										<span class="e-sms__info--title">Информация о движении по текущему счету (последние 3 операции)</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">T, TRA, TRANS, TRANSACT</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды, пробел, ввод маскированного кода текущего счета</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">Т [маскированный код счета]</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="payment">
+										<span class="e-sms__info--title">Отправка платежей</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">P, PAY, PAYM, PAYMENT</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды, пробел,названия шаблона платежа, пробел, сумма платежа ( в случае указания суммы в шаблоне платежа, в sms можно не указывать)</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">P [название шаблона платежа] [сумма]</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="wakeup">
+										<span class="e-sms__info--title">Возобновление sms-уведомлений</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">W, WAKE, WAKEUP</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">W</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="sleep">
+										<span class="e-sms__info--title">Приостановление sms-уведомлений</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">S, SL ,SLEEP</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">S</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="go">
+										<span class="e-sms__info--title">Команда GO на короткий номер 4343 предназначена для получения sms-сообщения с адресной ссылкой mbank.kz</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">GO, G</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">Ввод одного из вариантов команды</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">G</span>
+										</span>
+									</div>
+									<div class="b-sms__info--item" data-property="auto">
+										<span class="e-sms__info--title">Включение автоплатежа</span>
+										<span class="e-sms__info--variation">
+											<span class="e-sms__variation--title">Варианты команд:</span>
+											<span class="e-sms__variation--text">AUTO, A</span>
+										</span>
+										<span class="e-sms__info--order">
+											<span class="e-sms__order--title">Порядок ввода:</span>
+											<span class="e-sms__order--text">AUTO [название шаблона платежа] ON</span>
+										</span>
+										<span class="e-sms__info--sample">
+											<span class="e-sms__sample--title">Пример вводa:</span>
+											<span class="e-sms__sample--text">Ввод одной из вариантов команды, пробел, название шаблона платежа, пробел, ON</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<span class="e-sms__mobile"></span>
+						</div>
+					</div>
 					<div class="b-menu__item rate" data-item="rates">
 						<span class="e-rates__title">Тарифы системы "Mobilebank"</span>
 						<span class="e-rates__subtitle__main">Дистанционное обслуживание клиентов</span>
@@ -190,16 +353,29 @@
 		</div>
 		<div class="b-advantages">
 			<div class="b-advantages__wrapper">
-				<span class="e-advantages__title">
+				<span class="e-advantages__title--global">
 					Преимущества
 				</span>
 				<div class="b-advantages__text">
-					<p class="e-advantages__text">
-						КАЗКОМ имеет самую крупную сеть банкоматов по Казахстану. Мы первые ввели мультивалютные банкоматы системы Cash-in. Перевести наличные на карту в течении 5 минут без очерей стало возможно благодаря мультивалютным банкоматам системы Cash-in.
-					</p>
-					<p class="e-advantages__text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ipsam qui quaerat deleniti eaque aut aperiam! Similique earum fuga illo distinctio officia quasi excepturi vel quos reprehenderit hic veniam fugiat. Harum magni voluptatem iusto obcaecati inventore commodi illo velit expedita saepe quisquam a quos molestiae officiis voluptatum hic explicabo facilis tempora ea nostrum corporis corrupti esse illum maiores asperiores quibusdam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ea fugit tempore expedita accusantium enim officia dolor magni minus vel veniam minima. Nobis fugit minima aut aperiam neque distinctio rem!
-					</p>
+					<span class="e-advantages__title">
+						Осуществление переводов денежных средств в тенге:
+					</span>
+					<ul class="e-advantages__list">
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>Между клиентами КАЗКОМа;</li>
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>Между своими текущими счетами, открытыми в КАЗКОМе;</li>
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>На банковские счета, открытые в других банках (собственные и   
+      принадлежащие третьим лицам).</li>
+					</ul>
+					<span class="e-advantages__title">
+						Информационные услуги:
+					</span>
+					<ul class="e-advantages__list">
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>Остатки по текущим счетам в КАЗКОМе;</li>
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>SMS – уведомления об изменении остатков по счетам;</li>
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>Последние операции по своим текущим счетам;</li>
+						<li class="e-advantages__item"><i class="icon-ok e-icon__advantages"></i>Информация о расположении банкоматов и операционных отделений 
+      КАЗКОМа.</li>
+					</ul>		
 				</div>
 				<span class="b-advantages__bkg"></span>
 			</div>
@@ -311,7 +487,7 @@
 	</div>
 	<footer>
 		<div class="b-footer__wrapper">
-			<div class="b-footer__columns">
+			<div class="b-footer__column">
 				<span class="b-footer__logo"></span>
 				<div class="b-footer__contact">
 					<span class="e-contact__title">Техническая поддержка:</span>
@@ -347,7 +523,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="b-footer__columns">
+			<div class="b-footer__column">
 				<span class="e-footer__list__title">О проекте</span>
 				<ul class="b-footer__list">
 					<li class="e-footer__items">
@@ -367,7 +543,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="b-footer__columns">
+			<div class="b-footer__column">
 				<span class="e-footer__list__title">Полезное</span>
 				<ul class="b-footer__list">
 					<li class="e-footer__items">
@@ -384,7 +560,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="b-footer__columns">
+			<div class="b-footer__column">
 				<span class="e-footer__list__title">Языки</span>
 				<ul class="b-footer__list">
 					<li class="e-footer__items">
@@ -400,7 +576,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="b-footer__columns">
+			<div class="b-footer__column">
 				<span class="e-get__up">
 					<i class="icon-circle-arrow-up icon-large"></i>Наверх
 				</span>
@@ -433,7 +609,7 @@
 			$('.b-menu__item:first-child').fadeIn();
 			$('.e-welcome__item:first-child').addClass('active');
 			
-			$('.m-lang__set').on('click', function() {
+			$('.m-lang__set').on('click', function(e) {
 				var lang = $(this).data('lang');
 				$('.m-lang__switch').fadeOut();
 				$('.e-current__lang').text(lang);
@@ -443,7 +619,7 @@
 			$(".e-call__me").mask("8 (999) 999 9999");
 			$('.e-book__call').on('click', function() {
 				console.log($(".e-call__me").val());
-				$('.b-call__bubble').addClass('active');
+				$('.b-call__bubble').addClass('active').fadeIn();
 				$('.b-call__bubble.active > *').fadeOut(100);
 			});
 			$('.e-get__up').on('click', function(){
@@ -460,8 +636,24 @@
 					$(this).addClass('active');
 					$('.b-menu__item').fadeOut(200);
 					$('.b-menu__item[data-item="'+ menu_item +'"]').fadeIn(300);
+					if (menu_item == 'bank_map') {
+						initialize();
+					}
 				}
 			}); 
+			
+			/* SMS-commands menu */
+			$('.e-sms__menu--item').on('click', function() {
+				var item_type = $(this).data('type');
+				if ($(this).hasClass('active')) {
+					return false;
+				} else {
+					$('.e-sms__menu--item, .b-sms__info--item').removeClass('active');
+					$('.b-sms__info--item').hide();
+					$(this).addClass('active');
+					$('.b-sms__info--item[data-property="'+ item_type +'"]').fadeIn().addClass('active');
+				}
+			});
 			
 			/* Slider for Reviews Block */
 			$('.m-slider__control').on('click', function() {
@@ -471,7 +663,8 @@
 					$('.m-slider__control, .b-reviews__slider').removeClass('active');
 					$(this).addClass('active');
 					var slideNum = $(this).data('slide');	
-					$('.b-reviews__slider[data-slider="'+ slideNum +'"]').addClass('active').fadeIn();
+					$('.b-reviews__slider').fadeOut(100);
+					$('.b-reviews__slider[data-slider="'+ slideNum +'"]').fadeIn().addClass('active');
 				}
 			});
 			/* Slider for Specials Block */
@@ -482,7 +675,7 @@
 					$('.m-specials__control, .b-specials__slider').removeClass('active');
 					$(this).addClass('active');
 					var slideNum = $(this).data('slide');	
-					$('.b-specials__slider[data-slider="'+ slideNum +'"]').addClass('active').fadeIn(800);
+					$('.b-specials__slider[data-slider="'+ slideNum +'"]').fadeIn(800).addClass('active');
 				}
 			});
 			$('#scene').parallax();
