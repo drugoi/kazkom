@@ -246,6 +246,7 @@ header.affix {
 
 .b-table {
     clear: both;
+    margin-bottom: 20px;
 }
 .b-table__head {
     background: #f3f3f3;
@@ -308,7 +309,18 @@ header.affix {
     max-width: 20px;
     width: 100%;
 }
-.b-table__user {
+.b-table__row {
+    background: #FFFFFF;
+    height: 38px;
+    border: 1px solid #d1d4d3;
+    border-bottom: none;
+    border-top: none;
+    color: #4d5357;
+    font-size: 13px;
+    line-height: 38px;
+    width: 100%;
+}
+.b-table__user-row {
     background: #eef4ed;
     height: 38px;
     border: 1px solid #d1d4d3;
@@ -319,9 +331,8 @@ header.affix {
     line-height: 38px;
     width: 100%;
 }
-.b-table__row,
-.b-table__user-row {
-    width: 100%;
+.b-table__user {
+    border-bottom: 1px solid #d1d4d3;
 }
 .e-table__user__edit {
     float: right;
