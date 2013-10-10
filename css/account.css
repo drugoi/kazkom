@@ -81,15 +81,19 @@ header.affix {
     padding-left: 10px;
 }
 .e-head-account {
+    display: block;
     color: #4d5357;
     font-size: 13px;
     line-height: 40px;
 }
 .e-head-account__name {
-    display: block;
     color: #007ea3;
     font-size: 13px;
     line-height: 30px;
+}
+.e-head-account__edit {
+    color: #4d5357;
+    font-size: 13px;
 }
 .b-head-exit {
     background: #004165; 
