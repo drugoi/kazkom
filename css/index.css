@@ -581,6 +581,7 @@ header.affix .e-logo {
 
 .b-menu__item.map {
 	width:100%;
+	padding: 0;
 }
 
 .b-menu__item.rate {
@@ -593,7 +594,17 @@ header.affix .e-logo {
     width: 100%;
 }
 
+.b-menu__item.demo {
+    padding: 0;
+}
+
 #map-canvas {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#map-canvas-two {
 	margin:0;
 	padding:0;
 	height:100%;
@@ -799,7 +810,9 @@ footer {
 	width:200px;
 }
 
-.b-footer__column:nth-child(1) {
+.b-f.b-menu__item.demo {
+    padding: 0;
+}ooter__column:nth-child(1) {
 	width:310px;
 	height:210px;
 }
@@ -1292,6 +1305,8 @@ footer {
 	background: rgba(0, 0, 0, 0) url(../img/b-sms__mobile.png) center center no-repeat;
 	background-size: contain;
 	width: 322px;
+	position: relative;
 	height: 453px;
 	float: right;
+	top: 24px;
 }
