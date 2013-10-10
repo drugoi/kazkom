@@ -211,6 +211,7 @@ header.affix {
     font-size: 0;
     font-weight: bold;
     color: #FFFFFF;
+    margin-bottom: 15px;
 }
 .e-pagination__back {
     font-size: 13px;
@@ -246,6 +247,75 @@ header.affix {
 .b-table {
     clear: both;
 }
+.b-table__head {
+    background: #f3f3f3;
+    height: 38px;
+    border: 1px solid #d1d4d3;
+    color: #007ea3;
+    font-size: 13px;
+    line-height: 38px;
+    width: 100%;
+}
+.b-table__head__row li {
+    display: inline-block;
+}
+.e-table__head__check {
+    max-width: 70px;
+    width: 100%;
+}
+.e-table__head__user {
+    max-width: 150px;
+    width: 100%;
+}
+.e-table__head__status {
+    max-width: 60px;
+    width: 100%;
+}
+.e-table__head__destination {
+    max-width: 90px;
+    width: 100%;
+}
+.e-table__head__number {
+    max-width: 160px;
+    width: 100%;
+}
+.e-table__head__type {
+    max-width: 220px;
+    width: 100%;
+}
+.e-table__head__sum {
+    max-width: 90px;
+    width: 100%;
+}
+.e-table__head__left {
+    max-width: 70px;
+    width: 100%;
+}
+.e-table__head__edit {
+    max-width: 20px;
+    width: 100%;
+}
+.b-table__user {
+    background: #eef4ed;
+    height: 38px;
+    border: 1px solid #d1d4d3;
+    color: #4d5357;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 38px;
+    width: 100%;
+}
+.e-table__user__check {
+
+}
+.e-table__user__user {
+    
+}
+.e-table__user__edit {
+    float: right;
+}
+
+
 
 .b-helpicons {
     margin:0 auto;
