@@ -4,7 +4,7 @@ header.affix {
 .b-head__wrapper {
     margin:0 auto;
     max-width: 960px;
-    height: 80px;
+    height: 79px;
     width: 100%;
     clear: both;
 }
@@ -26,9 +26,9 @@ header.affix {
     background:rgba(0,0,0,0) url(../img/kkb__logo-a.png) no-repeat center center;
 }
 .b-head-user {
-    background: #FFFFFF url(../img/b-user__back.png) no-repeat right; 
-    max-width: 300px;
-    height: 100%;
+    background: #FFFFFF; 
+    max-width: 275px;
+    height: 79px;
     width: 100%;
     float: left;
     border-bottom: 1px solid #d1d4d3;
@@ -51,13 +51,38 @@ header.affix {
     font-size: 13px;
     width: 140px;
 }
+.e-head__back {
+    display: block;
+    float:left;
+    width: 25px;
+    height: 80px;
+    background: #FFFFFF url(../img/b-user__back.png) no-repeat right; 
+}
+.e-head__back2 {
+    display: block;
+    float:left;
+    width: 25px;
+    height: 80px;
+    background: #FFFFFF url(../img/b-user__back.png) no-repeat right; 
+}
 .b-head-account {
-    background: #FFFFFF url(../img/b-account__back.png) no-repeat right; 
-    max-width: 420px;
-    height: 100%;
+    background: #FFFFFF; 
+    max-width: 385px;
+    height: 79px;
     width: 100%;
     float: left;
     border-bottom: 1px solid #d1d4d3;
+}
+.b-head-exit {
+    background: #004165; 
+    max-width: 50px;
+    height: 79px;
+    width: 100%;
+    float: left;
+}
+.e-head-exit {
+    color: #FFFFFF;
+    line-height: 80px;
 }
 .b-head-contact__wrapper {
     clear: both;
