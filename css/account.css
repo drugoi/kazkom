@@ -256,41 +256,54 @@ header.affix {
     line-height: 38px;
     width: 100%;
 }
+.b-table__row li,
+.b-table__user-row li,
 .b-table__head__row li {
     display: inline-block;
 }
+.e-table__check,
+.e-table__user__check,
 .e-table__head__check {
     max-width: 70px;
     width: 100%;
 }
+.e-table__user,
+.e-table__user__user,
 .e-table__head__user {
     max-width: 150px;
     width: 100%;
 }
+.e-table__status,
 .e-table__head__status {
     max-width: 60px;
     width: 100%;
 }
+.e-table__destination,
 .e-table__head__destination {
     max-width: 90px;
     width: 100%;
-}
+},
+.e-table__number,
 .e-table__head__number {
     max-width: 160px;
     width: 100%;
 }
+.e-table__type,
 .e-table__head__type {
     max-width: 220px;
     width: 100%;
 }
+.e-table__sum,
 .e-table__head__sum {
     max-width: 90px;
     width: 100%;
 }
+.e-table__left,
 .e-table__head__left {
     max-width: 70px;
     width: 100%;
 }
+.e-table__user__edit,
 .e-table__head__edit {
     max-width: 20px;
     width: 100%;
@@ -299,17 +312,16 @@ header.affix {
     background: #eef4ed;
     height: 38px;
     border: 1px solid #d1d4d3;
+    border-bottom: none;
     color: #4d5357;
     font-size: 13px;
     font-weight: bold;
     line-height: 38px;
     width: 100%;
 }
-.e-table__user__check {
-
-}
-.e-table__user__user {
-    
+.b-table__row,
+.b-table__user-row {
+    width: 100%;
 }
 .e-table__user__edit {
     float: right;
