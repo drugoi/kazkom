@@ -105,26 +105,49 @@ header.affix {
 .e-head-exit {
     color: #FFFFFF;
     line-height: 80px;
+    font-size: 13px;
+    padding-left: 10px;
 }
 .b-head-contact__wrapper {
     clear: both;
-    background: #f9f9f9;
+    background: url(../img/b-head.png) repeat-x;
     width: 100%;
+    margin-top: 80px;
 }
 .b-head-contact {
+    display: block;
     margin:0 auto;
-    max-width: 1033px;
-    height: 50px;
+    max-width: 960px;
     width: 100%;
     clear: both;
-}
-.e-head-telephone__text,
-.e-head-skype__text,
-.e-head-mail__text {
-    margin-left: 5px;
-    font-size: 13px;
+    padding: 13px 0 17px;
     color: #4d5357;
 }
+.e-head-contact__text {
+    margin-left: 5px;
+    font-size: 15px;
+    color: #4d5357;
+    margin-right: 30px;
+}
+.e-head-contact__text a,
+.e-head-contact__text a:hover,
+.e-head-contact__text a:visited {
+    text-decoration: none;
+    font-style: italic;
+    color: #4d5357;
+}
+.b-head-social {
+    float: right;
+    font-size: 15px;
+    margin-top: -5px;
+}
+.b-head-social .icon-circle {
+    color: #4d5357;
+}
+.b-head-social .e-footer__icons {
+    color: #FFFFFF;
+}
+
 
 .b-container {
     margin: 80px auto 0;
@@ -235,4 +258,7 @@ header.affix {
     height: 90px;
     width: 100%;
     clear: both;
+}
+.b-footer__column:nth-child(5) {
+    width: 100px;
 }
