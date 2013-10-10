@@ -49,7 +49,7 @@ header.affix {
     display: inline-block;
     color: #4d5357;
     font-size: 13px;
-    width: 140px;
+    max-width: 140px;
 }
 .e-head-user__edit {
     float: right;
@@ -150,7 +150,7 @@ header.affix {
 
 
 .b-container {
-    margin: 80px auto 0;
+    margin: 90px auto 0;
     max-width: 960px;
     height: 100%;
     width: 100%;
@@ -177,35 +177,75 @@ header.affix {
 }
 
 .b-editbuttons {
-
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 .e-editbutton__send {
-
+    display: inline-block;
+    background: #24740f;
+    padding: 10px;
+    box-shadow: 0 3px 0 #185108;
+    margin-right: 20px;
+    cursor: pointer;
 }
 .e-editbutton__create {
-    
+    display: inline-block;
+    background: #24740f;
+    padding: 10px;
+    box-shadow: 0 3px 0 #185108;
+    margin-right: 20px;
+    cursor: pointer;
 }
 .e-editbutton__delete {
-    
+    display: inline-block;
+    background: #900a20;
+    padding: 10px;
+    box-shadow: 0 3px 0 #78051a;
+    cursor: pointer;
 }
 
 .b-pagination {
-
+    float: right;
+    font-size: 0;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 .e-pagination__back {
-
+    font-size: 13px;
+    display: inline-block;
+    background: #f5f5f5;
+    padding: 10px;
+    box-shadow: 0 3px 0 #d2d4d5;
+    cursor: pointer;
 }
-.e-pagination__items {
-
+.e-pagination__elems {
+    font-size: 13px;
+    display: inline-block;
+    background: #d8d8d8;
+    padding: 10px;
+    box-shadow: 0 3px 0 #a6a9ab;
 }
 .e-pagination__forward {
-
+    font-size: 13px;
+    display: inline-block;
+    background: #d8d8d8;
+    padding: 10px;
+    box-shadow: 0 3px 0 #a6a9ab;
+    cursor: pointer;
 }
 .e-pagination__pages {
-
+    font-size: 13px;
+    color: #4d5357;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
 }
 
-
+.b-table {
+    clear: both;
+}
 
 .b-helpicons {
     margin:0 auto;
@@ -240,15 +280,16 @@ header.affix {
     background-position: -569px -15px;
 }
 .e-helpicon__img.demo {
-    background-position: -736px -15px;
+    background-position: -741px -15px;
 }
 .e-helpicon__img.help {
     background-position: -915px -15px;
 }
 .e-helpicon__txt {
+    color: #007ea3;
     display: inline-block;
     font-size: 14px;
-    border-bottom: 1px dashed #4d5357;
+    border-bottom: 1px dashed #007ea3;
     text-align: center;
 }
 
