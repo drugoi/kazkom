@@ -2,7 +2,7 @@ header.affix {
     height: 80px;
 }
 .b-head__wrapper {
-    margin:0 auto;
+    margin: 0 auto;
     max-width: 960px;
     height: 79px;
     width: 100%;
@@ -56,6 +56,7 @@ header.affix {
     font-size: 13px;
     margin-right: 10px;
     margin-top: 10px;
+    cursor: pointer;
 }
 .e-head__back {
     display: block;
@@ -94,6 +95,7 @@ header.affix {
 .e-head-account__edit {
     color: #4d5357;
     font-size: 13px;
+    cursor: pointer;
 }
 .b-head-exit {
     background: #004165; 
@@ -109,10 +111,12 @@ header.affix {
     padding-left: 10px;
 }
 .b-head-contact__wrapper {
+    position: relative;
     clear: both;
     background: url(../img/b-head.png) repeat-x;
     width: 100%;
     margin-top: 80px;
+    z-index: 9989;
 }
 .b-head-contact {
     display: block;
@@ -141,18 +145,98 @@ header.affix {
     font-size: 15px;
     margin-top: -5px;
 }
-.b-head-social .icon-circle {
-    color: #4d5357;
+.e-head-social__icon {
+    border-radius: 50%;
+    background-color: #4d5357;
+    color: #FFFFFF;
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
 }
-.b-head-social .e-footer__icons {
+.e-head-social__icon:hover {
+    background-color: rgba(77, 83, 87, 0.7);
+}
+.e-head-social__icon.fb {
+    padding-left: 8px;
+    width: 17px;
+}
+.e-head-social__icon.yt {
+    padding-left: 4px;
+    width: 21px;
+}
+.e-head-social__icon.vk {
+    padding-left: 2px;
+    width: 23px;
+}
+
+.b-head-menu {
+    position: relative;
+    margin-top: -10px;
+    clear: both;
+    background: #007ea3;
+    width: 100%;
+    height: 50px;
+    z-index: 9988;
+}
+.b-head-menu__items {
+    margin: 0 auto;
+    max-width: 960px;
+    display: table;
+    width: 100%;
+    line-height: 50px;
+}
+.b-head-menu a:visited {
     color: #FFFFFF;
 }
-
+.b-head-menu a:hover {
+    text-decoration: none;
+}
+.e-head-menu__item {
+    display: table-cell;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+.e-head-menu__item:hover {
+    font-weight: bold;
+    background: #eeaf00;
+    color: #007ea3;
+}
+.e-head-menu__item.active {
+    background: #eeaf00;
+}
+/*
+.e-head-menu__item:hover :after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: relative;
+    top: 57px;
+    left: -20%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 20px solid #eeaf00;
+}
+.e-head-menu__item.active:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: relative;
+    top: 57px;
+    left: -20%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 20px solid #eeaf00;
+}
+*/
 
 .b-container {
-    margin: 90px auto 0;
+    margin: 0 auto;
     max-width: 960px;
-    height: 100%;
+    height: 150%;
     width: 100%;
     clear: both;
 }
@@ -177,6 +261,7 @@ header.affix {
 }
 
 .b-editbuttons {
+    height: 40px;
     float: left;
     font-size: 13px;
     font-weight: bold;
@@ -207,6 +292,7 @@ header.affix {
 }
 
 .b-pagination {
+    height: 40px;
     float: right;
     font-size: 0;
     font-weight: bold;
@@ -246,6 +332,7 @@ header.affix {
 
 .b-table {
     clear: both;
+    margin-bottom: 20px;
 }
 .b-table__head {
     background: #f3f3f3;
@@ -266,9 +353,28 @@ header.affix {
     width: 100%;
     padding-left: 40px;
 }
-.e-table__check {
-
+/*
+.e-table__check:before {
+    content: '';
+    height: 38px;
+    border-left: 1px solid #d1d4d3;
+    position: relative;
+    top: 3px;
+    left: -23px;
+    display: inline-block;
+    margin-top: -16px;
 }
+.e-table__check:after {
+    content: '';
+    width: 38px;
+    border-top: 1px solid #d1d4d3;
+    position: relative;
+    top: 3px;
+    left: -23px;
+    display: inline-block;
+    margin-top: -16px;
+}
+*/
 .e-table__user__check,
 .e-table__head__check {
     max-width: 60px;
@@ -325,6 +431,11 @@ header.affix {
     max-width: 70px;
     width: 100%;
 }
+.e-table__user__edit {
+    font-size: 20px;
+    float: right;
+    padding-right: 10px;
+}
 .e-table__user__edit,
 .e-table__head__edit {
     max-width: 20px;
@@ -355,14 +466,10 @@ header.affix {
 .b-table__user {
     border-bottom: 1px solid #d1d4d3;
 }
-.e-table__user__edit {
-    float: right;
-}
-
 
 
 .b-helpicons {
-    margin: 20px auto 0;
+    margin: 0 auto;
     max-width: 960px;
     height: 110px;
     width: 100%;
@@ -408,14 +515,13 @@ header.affix {
 }
 
 .b-banner {
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 960px;
     height: 90px;
     width: 100%;
     clear: both;
 }
 .b-footer__wrapper {
-    margin: 80px auto 0;
 }
 .b-footer__column:nth-child(5) {
     width: 100px;
