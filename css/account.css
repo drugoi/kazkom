@@ -1,6 +1,6 @@
 .b-head__wrapper {
     margin:0 auto;
-    max-width: 1033px;
+    max-width: 960px;
     height: 80px;
     width: 100%;
     clear: both;
@@ -58,7 +58,13 @@
     color: #4d5357;
 }
 
-
+.b-container {
+    margin: 80px auto 0;
+    max-width: 960px;
+    height: 100%;
+    width: 100%;
+    clear: both;
+}
 
 .b-license {
     clear: both;
@@ -77,4 +83,60 @@
     font-size: 11px;
     float: right;
     margin-top: 22px;
+}
+
+
+.b-helpicons {
+    margin:0 auto;
+    max-width: 960px;
+    height: 110px;
+    width: 100%;
+    clear: both;
+}
+.b-helpicons__list {  
+    display: table;
+    width: 100%;
+}
+.b-helpicon {
+    display: table-cell;
+}
+.e-helpicon__img {
+    display: block;
+    background: url(../img/icons.png) no-repeat 0 0;
+    width: 80px;
+    height: 70px;
+    margin: 0 auto;
+}
+.e-helpicon__img.atm {
+    background-position: -47px -15px;
+}
+.e-helpicon__img.offices {
+    background-position: -225px -15px;
+}
+.e-helpicon__img.sms {
+    background-position: -389px -15px;
+}
+.e-helpicon__img.tariff {
+    background-position: -569px -15px;
+}
+.e-helpicon__img.demo {
+    background-position: -736px -15px;
+}
+.e-helpicon__img.help {
+    background-position: -915px -15px;
+}
+.e-helpicon__txt {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 14px;
+    border-bottom: 1px dashed #4d5357;
+    text-align: center;
+}
+
+.b-banner {
+    margin:0 auto;
+    max-width: 960px;
+    height: 90px;
+    width: 100%;
+    clear: both;
 }
