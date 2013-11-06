@@ -285,13 +285,15 @@ header.affix {
 }
 
 .e-head-menu__item.payments.active:after {
-	left: 414px;
+  left: 414px;
 }
+
 .e-head-menu__item.notifications.active:after {
-	left: 710px;
+  left: 710px;
 }
+
 .e-head-menu__item.recipients.active:after {
-	left: 940px;	
+  left: 940px;
 }
 
 .e-head-menu__item.accounts {
@@ -407,6 +409,8 @@ header.affix {
   font-size: 13px;
 }
 
+
+
 .e-pagination__pages {
   display: inline-block;
   margin-right: 20px;
@@ -420,17 +424,20 @@ input.edit {
   top: 20px;
   display: block;
   margin-right: 2px;
+  margin-left: -15px;
+  padding-left: 15px;
   height: 35px!important;
   border: 1px solid #ccc;
   background: #FFF;
+  text-align: left;
   line-height: 35px!important;
 }
 
 .b-table {
+  z-index: 2;
   display: none;
   float: left;
   clear: both;
-  z-index: 2;
   margin-bottom: 20px;
 }
 
@@ -439,10 +446,10 @@ input.edit {
 }
 
 .b-table__head {
+  z-index: 1;
   width: 100%;
   height: 38px;
   border: 1px solid #d1d4d3;
-  z-index: 1;
   background: #f3f3f3;
   color: #007ea3;
   font-size: 13px;
@@ -508,8 +515,6 @@ input.edit {
   max-width: 30px;
   width: 100%;
 }
-
-
 
 .e-table__user__check,
 .e-table__head__check {
@@ -687,8 +692,6 @@ input.edit {
   height: 90px;
 }
 
-
-
 .b-footer__column:nth-child(5) {
   width: 100px;
 }
@@ -736,7 +739,7 @@ input.edit {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  height: 40px;
+  height: 100%;
   border: none;
   background-color: transparent;
   color: #4D5357;
@@ -745,14 +748,14 @@ input.edit {
   -webkit-appearance: none;
 }
 
-.b-table__lines.edit .e-account__item,
-.b-table__lines.edit .e-icon__item,
-.b-table__lines.edit .e-currency__item,
-.b-table__lines.edit .e-name__item,
-.b-table__lines.edit .e-daily__limit__item,
-.b-table__lines.edit .e-monthly__limit__item,
-.b-table__lines.edit .e-amount__item,
-.b-table__lines.edit .e-setting__item {
+.b-table__lines.edit .e-account__item--wrapper,
+.b-table__lines.edit .e-icon__item--wrapper,
+.b-table__lines.edit .e-currency__item--wrapper,
+.b-table__lines.edit .e-name__item--wrapper,
+.b-table__lines.edit .e-daily__limit__item--wrapper,
+.b-table__lines.edit .e-monthly__limit__item--wrapper,
+.b-table__lines.edit .e-amount__item--wrapper,
+.b-table__lines.edit .e-setting__item--wrapper {
   display: block;
   float: left;
   -webkit-box-sizing: border-box;
@@ -762,6 +765,69 @@ input.edit {
   color: #4D5357;
   font-size: 13px;
   line-height: 80px;
+}
+
+.b-table__lines.edit .e-name__item--wrapper.edit,
+.b-table__lines.edit .e-daily__limit__item--wrapper.edit,
+.b-table__lines.edit .e-monthly__limit__item--wrapper.edit,
+.b-table__lines.edit .e-amount__item--wrapper.edit,
+.b-table__lines.edit .e-setting__item--wrapper.edit {
+  /* 	I */
+}
+
+.e-amount__item--wrapper.edit {
+  width: 130px;
+}
+
+.e-monthly__limit__item--wrapper.edit {
+  width: 130px;
+}
+
+.e-name__item--wrapper.edit {
+  width: 120px;
+}
+
+.e-daily__limit__item--wrapper.edit {
+  width: 145px;
+}
+
+
+
+.e-monthly__limit__item--wrapper.edit {
+  width: 170px;
+}
+
+.e-account__item.edit {
+  line-height: 80px;
+}
+
+.e-icon__item.edit {
+  line-height: 80px;
+}
+
+.e-currency__item.edit {
+  line-height: 80px;
+}
+
+.e-amount__item.edit {
+  width: 130px;
+}
+
+.e-setting__item--wrapper.edit {
+  width: 70px;
+}
+
+.e-setting__item.edit {
+  position: relative;
+  top: 18px;
+  left: 17px;
+  width: 50px;
+  height: 40px;
+  background: #24740f;
+  -webkit-box-shadow: 0px 4px 0px #185108;
+  box-shadow: 0px 4px 0px #185108;
+  text-align: center;
+  cursor: pointer;
 }
 
 .e-account__item {
@@ -794,7 +860,7 @@ input.edit {
 }
 
 .e-name__item {
-  width: 120px;
+  width: 100px;
   text-align: left;
 }
 
@@ -803,7 +869,7 @@ input.edit {
 }
 
 .e-daily__limit__item {
-  width: 100px;
+  width: 125px;
   text-align: right;
 }
 
@@ -812,7 +878,7 @@ input.edit {
 }
 
 .e-monthly__limit__item {
-  width: 155px;
+  width: 150px;
   text-align: right;
 }
 
@@ -822,8 +888,8 @@ input.edit {
 
 .e-amount__item {
   padding-left: 30px;
-  width: 230px;
-  text-align: center;
+  width: 165px;
+  text-align: right;
 }
 
 .b-table__accounts--settings {
@@ -831,7 +897,8 @@ input.edit {
 }
 
 .e-setting__item {
-  text-align: center;
+  width: 72px;
+  text-align: right;
 }
 
 .e-pencil__icon {
@@ -868,8 +935,6 @@ input.edit {
   background: transparent url(../img/account/b-companies__arrow.png) no-repeat center center;
   content: '';
 }
-
-
 
 .e-companies__item {
   height: 35px;
@@ -924,8 +989,6 @@ input.edit {
   content: '';
 }
 
-
-
 .e-settings__item {
   height: 35px;
   color: #4d5357;
@@ -957,47 +1020,96 @@ input.edit {
 }
 
 /* Block: SMS changing */
+
 .b-send__sms {
-    width: 200px;
-    background: #f9f9f9;
-    z-index: 9998;
-    border: 1px solid #D1D4D3;  -webkit-box-shadow: 0 0 12px 0 #E1E1E1; box-shadow: 0 0 12px 0 #E1E1E1;
-    position: relative;
-    top: 20px;
-    display: none;
+  position: relative;
+  top: 20px;
+  z-index: 9998;
+  display: none;
+  width: 200px;
+  border: 1px solid #D1D4D3;
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 0 12px 0 #E1E1E1;
+  box-shadow: 0 0 12px 0 #E1E1E1;
 }
 
 .b-sms__list {
+  /* i */
 }
 
 .e-sms__item {
-    height: 35px;
-    line-height: 35px;
-    font-size: 13px;
-    color: #4d5357;
-    font-weight: lighter;
-    cursor: pointer;
+  height: 35px;
+  color: #4d5357;
+  font-weight: lighter;
+  font-size: 13px;
+  line-height: 35px;
+  cursor: pointer;
 }
 
 .e-sms__item__number {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .sms__item--add {
-    background: #007ea3;
-    text-align: center;
-    color: #FFF;
-    font-weight: bold;
+  background: #007ea3;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
 }
 
 .sms__item--add:hover {
-	background: #007ea3 !important;
+  background: #007ea3 !important;
 }
 
 .e-sms__item:hover,
 .e-sms__item.active {
-    background: #e7e8e8;
+  background: #e7e8e8;
 }
 
 .e-sms__item__new {
+  /* i */
+}
+
+/* Block: Message to bank */
+
+.b-chat__bank {
+  position: fixed;
+  right: 12.5%;
+  bottom: 0;
+  z-index: 9999;
+  width: 260px;
+  height: 35px;
+  background: #4d5357;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.b-chat__bank--icons {
+  float: right;
+  margin-right: 10px;
+}
+
+.e-chat__title {
+  float: left;
+  margin-left: 10px;
+  color: #FFF;
+}
+
+.e-icon__chat--up {
+  margin-right: 5px;
+  color: #b3b5b6;
+  font-size: 20px;
+}
+
+.e-icon__chat--resize {
+  margin-right: 5px;
+  color: #B3B5B6;
+  font-size: 20px;
+}
+
+.e-icon__chat--times {
+  color: #B3B5B6;
+  font-size: 20px;
 }
