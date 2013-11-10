@@ -196,6 +196,16 @@ header {
   background: #004165 url(../img/header.png) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
+  box-shadow: 2px 1px 9px #7A92A9;
+}
+
+header:after {
+    content: '';
+    background: transparent url(../img/arrows/e-header__arrow.png);
+    display: block;
+    width: 31px;
+    height: 15px;
+    margin: 3px auto;
 }
 
 header.affix {
@@ -203,6 +213,15 @@ header.affix {
   top: 0;
   width: 100%;
   height: 60px;
+}
+
+header.affix:after {
+    content: '';
+    background: transparent url(../img/arrows/e-header__arrow.png);
+    display: block;
+    width: 31px;
+    height: 15px;
+    margin: -20px auto;
 }
 
 header.affix .b-header__wrapper {
@@ -255,7 +274,7 @@ header.affix .e-logo {
 
 .e-enter {
   position: relative;
-  top: 30px;
+  top: 35px;
   display: block;
   float: left;
   margin: 0 0 0 100px;
@@ -286,6 +305,8 @@ header.affix .e-logo {
   float: left;
   margin: 0;
   padding: 30px;
+  padding-top: 35px;
+  padding-bottom: 28px;
   max-width: 100%;
   width: 315px;
   height: 40px;
@@ -333,7 +354,7 @@ header.affix .e-logo {
 
 .b-current__lang {
   position: relative;
-  top: 30px;
+  top: 35px;
   width: 40px;
   height: 20px;
   color: #FFF;
@@ -357,7 +378,7 @@ header.affix .e-logo {
 
 .m-lang__switch {
   position: relative;
-  top: 20px;
+  top: 27px;
   left: -115px;
   display: none;
   width: 194px;
@@ -373,7 +394,7 @@ header.affix .e-logo {
   position: relative;
   top: 17px;
   float: left;
-  margin-left: 22px;
+  margin-left: 21px;
   width: 140px;
 }
 
@@ -602,6 +623,7 @@ header.affix .e-logo {
   float: left;
   width: 162.5px;
   height: 142px;
+  padding: 10px 0;
   text-align: center;
   cursor: pointer;
 }
@@ -618,7 +640,7 @@ header.affix .e-logo {
   position: absolute;
   z-index: 9998;
   display: inline-block;
-  margin: 142px -15px 0;
+  margin: 152px -15px 0;
   width: 30px;
   height: 15px;
   background: url(../img/b-menu__active.png) no-repeat center center;
@@ -677,6 +699,7 @@ header.affix .e-logo {
   float: left;
   width: 100%;
   background: rgba(0,0,0,0.9);
+  box-shadow: 0px 9px 15px -8px #000;
 }
 
 .b-menu__item {
@@ -982,6 +1005,7 @@ footer {
 
 .e-footer__list__title {
   display: block;
+  margin-top: 5px;
   margin-bottom: 30px;
   font-size: 19px;
 }
@@ -1007,6 +1031,7 @@ footer {
   display: block;
   font-size: 13px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .b-footer__columns:nth-child(5) {
@@ -1015,6 +1040,24 @@ footer {
 
 .e-get__up .icon-circle-arrow-up {
   margin-right: 6px;
+}
+
+.e-get__up__icon {
+    background: rgba(0, 0, 0, 0) url(../img/arrows/arrowsup.png);
+    width: 21px;
+    height: 21px;
+    display: block;
+    float: left;
+    position: relative;
+}
+
+.e-get__up__text {
+    margin-top: 5px;
+    display: block;
+    float: left;
+}
+.e-get__up__text:hover {
+    text-decoration: underline;
 }
 
 .b-license {
@@ -1047,6 +1090,16 @@ footer {
   height: 500px;
   /* height: 100%; */
   background: #fff;
+}
+
+.b-advantages:after {
+    content: '';
+    position: relative;
+    background: rgba(0, 0, 0, 0) url(../img/arrows/e-advantages__arrow.png);
+    width: 31px;
+    height: 15px;
+    display: block;
+    margin: 0px auto;
 }
 
 .b-advantages__wrapper {
@@ -1126,6 +1179,16 @@ footer {
 .b-reviews {
   height: 540px;
   background: #007EA3 url(../img/b-reviews__bkg.png);
+}
+
+.b-reviews:after {
+    content: '';
+    position: relative;
+    background: transparent url(../img/arrows/e-reviews__arrow.png);
+    width: 31px;
+    height: 15px;
+    display: block;
+    margin: 3px auto;
 }
 
 .b-reviews__wrapper {
@@ -1226,7 +1289,16 @@ footer {
 }
 
 /* Block: Specials */
+.b-specials {
+    height: 470px;
+}
 
+.b-specials:after {
+    content: ''; position: relative; background: rgba(0, 0, 0, 0) url(../img/arrows/e-advantages__arrow.png); width: 31px; height: 15px; 
+    z-index: 9999;
+    display: block; 
+    margin: 20px auto 0;
+}
 
 
 .b-specials__wrapper {
@@ -1242,6 +1314,7 @@ footer {
   text-transform: uppercase;
   font-weight: 200;
   font-size: 29px;
+  color: #007ea3;
 }
 
 .m-specials__slide {
