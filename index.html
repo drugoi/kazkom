@@ -14,25 +14,6 @@
 		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
 	<![endif]-->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ0ZQjzakPeM5pyocVhqj5igvxn0kvw2o&sensor=true"></script>
-	<script>
-	      var map;
-	      var map2;
-			function initialize() {
-			  var mapOptions = {
-			    zoom: 12,
-			    scrollwheel: false,
-			    center: new google.maps.LatLng(43.2775, 76.895833),
-			    mapTypeId: google.maps.MapTypeId.ROADMAP
-			  };
-			  map = new google.maps.Map(document.getElementById('map-canvas'),
-			      mapOptions);
-			  map2 = new google.maps.Map(document.getElementById('map-canvas-two'),
-			      mapOptions);
-			}
-			
-			google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
-	
 </head>
 <body>
 	<header data-spy="affix" data-offset-top="0">
@@ -385,7 +366,7 @@
 		<div class="b-reviews">
 			<div class="b-reviews__wrapper">
 				<span class="e-reviews__title">Отзывы от клиентов</span>
-				<div class="b-reviews__slider active" data-slider="1">
+				<div class="b-reviews__slider active" data-slider="1" style="display:block;">
 					<div class="e-slider__name">Лариса Ивановна</div>
 						<img src="img/b-review__photo.png" alt="" class="e-slider__photo">
 					<span class="e-slider__description">
@@ -436,12 +417,12 @@
 		<div class="b-specials">
 			<div class="b-specials__wrapper">
 				<span class="e-specials__title">полезные сервисы и услуги</span>
-				<span class="m-specials__slide left"></span>
-				<span class="m-specials__slide right"></span>
+				<span class="m-specials__slide left" data-slide-prev="0"></span>
+				<span class="m-specials__slide right" data-slider-next="2"></span>
 				<div class="b-specials__slider active" data-slider="5">
 					<div class="b-specials__slide one">
 						<img src="img/b-gocard.png" alt="" class="e-specials__logo">
-						<div class="e-specials__annotate">Бонусная карточка — это новый платежный инструмент Казкоммерцбанка, позволяющий вам не только тратить средства, которые дает банк, но еще и зарабатывать на этом. </div>
+						<div class="e-specials__annotate">Бонусная карточка — это новый платежный инструмент Казкоммерцбанка, позволяющий вам не только тратить средства, которые дает банк, но еще и  зарабатывать на этом. </div>
 					</div>
 					<div class="b-specials__slide two">
 						<img src="img/b-homebank.png" alt="" class="e-specials__logo">
@@ -595,114 +576,6 @@
 		</div>
 	</footer>
 	<script src="js/main.min.js"></script>
-	<script>
-		/*  Global Variables*/
-		var slideNum;
-		var lang;
-		var menu_item;
-		var item_type;
-		var slideNum;
-		
-		
-		$(document).ready(function() {
-			/* Scroll Header */
-            $('header').affix({offset: {top: 0}});
-		
-			/* Lang Switching */ 
-			$('.b-current__lang').on('click', function() {
-				if ($(this).hasClass('active')) {
-					$('.m-lang__switch').fadeOut();
-					$(this).removeClass('active');
-				} else {
-					$(this).addClass('active');
-					$('.m-lang__switch').fadeIn();	
-				}
-			});
-			
-			$('.b-menu__item:first-child').fadeIn();
-			$('.e-welcome__item:first-child').addClass('active');
-			
-			$('.m-lang__set').on('click', function(e) {
-				lang = $(this).data('lang');
-				$('.m-lang__switch').fadeOut();
-				$('.e-current__lang').text(lang);
-				$('.b-current__lang').removeClass('active');
-			});
-		
-			$(".e-call__me").mask("8 (999) 999 9999");
-			$('.e-book__call').on('click', function() {
-				console.log($(".e-call__me").val());
-				$('.b-call__bubble').addClass('active').fadeIn();
-				$('.b-call__bubble.active > *').fadeOut(100);
-			});
-			$('.e-get__up').on('click', function(){
-				$('html, body').animate( { scrollTop: 0 }, 800 );
-			});
-			/* Menu Items */
-			$('.e-welcome__item').on('click', function() {
-				menu_item = $(this).data('menu');
-				
-				if ($(this).hasClass('active')) {
-					return false;
-				} else {
-					$('.e-welcome__item').removeClass('active');
-					$(this).addClass('active');
-					$('.b-menu__item').fadeOut(200);
-					$('.b-menu__item[data-item="'+ menu_item +'"]').fadeIn(300);
-					if (menu_item == 'bank_map') {
-						initialize();
-					} else if (menu_item == 'branch_map') {
-						initialize();
-					}
-				}
-			}); 
-			
-			$('.e-enter__text').on('click', function(){
-				location.replace('account.html');
-			});
-			
-			/* SMS-commands menu */
-			$('.e-sms__menu--item').on('click', function() {
-				item_type = $(this).data('type');
-				if ($(this).hasClass('active')) {
-					return false;
-				} else {
-					$('.e-sms__menu--item, .b-sms__info--item').removeClass('active');
-					$('.b-sms__info--item').hide();
-					$(this).addClass('active');
-					$('.b-sms__info--item[data-property="'+ item_type +'"]').fadeIn().addClass('active');
-				}
-			});
-			
-			/* Slider for Reviews Block */
-			$('.m-slider__control').on('click', function() {
-				if ($(this).hasClass('active')) {
-					return false;
-				} else {
-					$('.m-slider__control, .b-reviews__slider').removeClass('active');
-					$(this).addClass('active');
-					slideNum = $(this).data('slide');	
-					$('.b-reviews__slider').fadeOut(100);
-					$('.b-reviews__slider[data-slider="'+ slideNum +'"]').fadeIn().addClass('active');
-				}
-			});
-			/* Slider for Specials Block */
-			$('.m-specials__control').on('click', function() {
-				if ($(this).hasClass('active')) {
-					return false;
-				} else {
-					$('.m-specials__control, .b-specials__slider').removeClass('active');
-					$(this).addClass('active');
-					slideNum = $(this).data('slide');	
-					$('.b-specials__slider').fadeOut(100);
-					$('.b-specials__slider[data-slider="'+ slideNum +'"]').fadeIn(800).addClass('active');
-				}
-			});
-			$('#scene').parallax();
-			$(window).resize(function() {
-				$('#scene').parallax();
-			});
-		});
- 	</script>
+	<script src="js/index.js"></script>
 </body>
 </html>
