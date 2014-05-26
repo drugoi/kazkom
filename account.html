@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мобильный Банкинг</title>
+    
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+    <![endif]-->
+</head>
+<body>
+    <header data-spy="affix" data-offset-top="0">
+        <div class="b-head__wrapper">
+            <div class="b-head-logo">
+                <span class="e-head-logo"></span>
+            </div>
+                
+            <div class="b-head-user">
+                <span class="e-head-user">
+                    <i class="icon-user icon-4x"></i>
+                </span>
+                <span class="e-head-user__name">Шеметовшеметов Илья Александрович</span>
+                <span class="e-head-user__edit">
+                    <i class="icon-gear"></i>
+                    <i class="icon-caret-down"></i>
+                </span>
+                <div class="b-settings">
+                	<ul class="b-settings__list">
+                		<li class="e-settings__item">
+	                		<span class="e-settings__item_title">Сменить пароль</span>
+                		</li>
+                		<li class="e-settings__item">
+	                		<span class="e-settings__item_title">Привязать ЭЦП</span>
+                		</li>
+                		<li class="e-settings__item">
+	                		<span class="e-settings__item_title">Сменить ПИН-код</span>
+                		</li>
+                		<li class="e-settings__item e-settings__item--double">
+	                		<span class="i-country f-kaz e-settings__flag"></span>
+							<span class="e-setting__lang">Қазақша</span>
+                		</li>
+                		<li class="e-settings__item e-settings__item--double">
+	                		<span class="i-country f-eng e-settings__flag"></span>
+							<span class="e-setting__lang">English</span>
+                		</li>
+                	</ul>
+                </div>
+            </div>
+                <div class="e-head__back"></div>
+
+            <div class="b-head-account">
+                <span class="e-head-account">
+                    <i class="icon-barcode"></i>
+                    130140024796
+                    <span class="e-head-account__rnn"></span>
+                </span>
+                <span class="b-head-account__main">
+	                <span class="e-head-account__name">АО КАЗАХТЕЛЕКОМ</span>
+	                <span class="e-head-account__edit">
+                    	<i class="icon-caret-down"></i>
+                    </span>
+                </span>
+                <div class="b-companies">
+                	<ul class="b-companies__list">
+                		<li class="e-companies__item active">
+                			<span class="e-companies__item--name">АО КАЗАХТЕЛЕКОМ</span>
+                		</li>
+                		<li class="e-companies__item">
+                			<span class="e-companies__item--name">AO TRADE HAUSE LTD</span>
+                		</li>
+                		<li class="e-companies__item">
+                			<span class="e-companies__item--name">AO ANIMATOR PRODACTION</span>
+                		</li>
+                		<li class="e-companies__item">
+                			<span class="e-companies__item--name">АО АЛМАТЫТЕЛЕКОМ</span>
+                		</li>
+                		<li class="e-companies__item">
+                			<span class="e-companies__item--name">АО БОТЛЕРСАЛМАТЫ</span>
+                		</li>
+                	</ul>
+                </div>
+            </div>
+                <div class="e-head__back2"></div>
+
+            <div class="b-head-exit">
+                <a href="#!">
+                <span class="e-head-exit">
+                    Выйти
+                </span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="b-head-contact__wrapper">
+        <div class="b-head-contact">
+            <span class="e-head-telephone">
+                <span class="e-head-contact__text">
+                <i class="icon-phone icon-large"></i>
+                    <a href="tel:+77273300030">8(727)330 00 30</a>, <a href="tel:+772725851">8(727)25851</a>
+                </span>
+            </span>
+            <span class="e-head-skype">
+                <span class="e-head-contact__text">
+                <i class="icon-skype icon-large"></i>
+                    <a href="skype:onlinebank_kkb?chat">onlinebank_kkb</a></span>
+            </span>
+            <span class="e-head-mail">
+                <span class="e-head-contact__text">
+                <i class="icon-envelope icon-large"></i>
+                    <a href="mailto:supportt@mbank.kz">support@mbank.kz</a></span>
+            </span>
+            <div class="b-head-social">
+                 <span class="e-head-social__icon">
+                    <i class="icon-twitter icon-large"></i>
+                </span>
+                <span class="e-head-social__icon fb">
+                    <i class="icon-facebook icon-large"></i>
+                </span>
+                <span class="e-head-social__icon yt">
+                    <i class="icon-youtube icon-large"></i>
+                </span>
+                <span class="e-head-social__icon vk">
+                    <i class="icon-vk icon-large"></i>
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <div class="b-head-menu">
+        <ul class="b-head-menu__items">
+            <li class="e-head-menu__item accounts active" data-type="accounts"><a href="#!">Счета</a></li>
+            <li class="e-head-menu__item payments" data-type="payments"><a href="#!">Платежи</a></li>
+            <li class="e-head-menu__item notifications" data-type="notifications"><a href="#!">Уведомления</a></li>
+            <li class="e-head-menu__item recipients" data-type="recipients"><a href="#!">Получатели</a></li>
+        </ul>
+    </div>
+
+    <div class="b-container" id="main">
+        <div class="b-editbuttons">
+            <div class="e-editbutton__send">
+                <i class="icon-comment-alt"></i>
+                &nbsp;
+                Отправить SMS
+                &nbsp;
+                <i class="icon-caret-down"></i>
+            </div>
+            <div class="b-send__sms">
+            	<ul class="b-sms__list">
+            		<li class="e-sms__item active">
+            			<span class="e-sms__item__number">+7 777 300 81 63</span>
+            		</li>
+            		<li class="e-sms__item">
+            			<span class="e-sms__item__number">+7 777 400 81 63</span>
+            		</li>
+            		<li class="e-sms__item">
+            			<span class="e-sms__item__number">+7 777 500 81 63</span>
+            		</li>
+            		<li class="e-sms__item sms__item--add">
+            			<span class="e-sms__item__new">Добавить новый номер</span>
+            		</li>
+            	</ul>
+            </div>
+            <div class="e-editbutton__create" style="display:none;">
+                <i class="icon-plus-sign"></i>
+                Создать
+                <i class="icon-caret-down"></i>
+            </div>
+            <div class="e-editbutton__delete"style="display:none;">
+                <i class="icon-trash"></i>
+                Удалить
+            </div>
+        </div>  
+        <div class="b-pagination">
+            <div class="e-pagination__back">&lt;</div>
+            <div class="e-pagination__elems">1-10</div>
+            <div class="e-pagination__forward">&gt;</div>
+            <div class="e-pagination__pages">из 300</div>
+        </div>
+
+        <div class="b-table accounts active" data-table="accounts">
+	        <div class="b-table__head accounts">
+		        <ul class="b-table__head__row accounts">
+		        	<li class="e-table__head account">
+			        	Счет <i class="icon-long-arrow-down e-account__icon"></i>
+		        	</li>
+		        	<li class="e-table__head currency">
+			        	Валюта
+		        	</li>
+		        	<li class="e-table__head name">
+			        	Название
+		        	</li>
+		        	<li class="e-table__head daily__limit">
+			        	Суточный лимит
+		        	</li>
+		        	<li class="e-table__head monthly__limit">
+			        	Месячный лимит
+		        	</li>
+		        	<li class="e-table__head amount">
+			        	Сумма
+		        	</li>
+		        	<li class="e-table__head cog">
+			        	<i class="icon-cog e-cog__icon"></i>
+		        	</li>
+		        </ul>
+	        </div>
+	        <div class="b-table__accounts">
+	        	<div class="b-table__lines" data-line="1">
+	        		<div class="e-account__item--wrapper">
+		        		<div class="e-account__item">KZT20101023030123019</div>
+	        		</div>
+		        	<div class="e-icon__item--wrapper">
+		        		<div class="e-icon__item"><i class="icon-lock icon-large"></i></div>
+		        	</div>
+		        	<div class="e-currency__item--wrapper">
+			        	<div class="e-currency__item">KZT</div>
+		        	</div>
+		        	<div class="e-name__item--wrapper">
+			        	<input type="text" disabled value="kazkom" class="e-name__item">
+			        </div>
+			        <div class="e-daily__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-daily__limit__item">
+			        </div>
+			        <div class="e-monthly__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-monthly__limit__item">
+			        </div>
+			        <div class="e-amount__item--wrapper">
+			        	<input type="text" disabled value="56 725 000.00" class="e-amount__item">
+			        </div>
+			        <div class="e-setting__item--wrapper">
+		        		<div class="e-setting__item">
+		        			<i class="icon-pencil e-pencil__icon"></i>
+		        			
+		        		</div>
+			        </div>
+	        	</div>
+	        	<div class="b-table__lines" data-line="2">
+	        		<div class="e-account__item--wrapper">
+		        		<div class="e-account__item">KZT20101023030123019</div>
+	        		</div>
+		        	<div class="e-icon__item--wrapper">
+		        		<div class="e-icon__item"><i class="icon-lock icon-large"></i></div>
+		        	</div>
+		        	<div class="e-currency__item--wrapper">
+			        	<div class="e-currency__item">KZT</div>
+		        	</div>
+		        	<div class="e-name__item--wrapper">
+			        	<input type="text" disabled value="kazkom" class="e-name__item">
+			        </div>
+			        <div class="e-daily__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-daily__limit__item">
+			        </div>
+			        <div class="e-monthly__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-monthly__limit__item">
+			        </div>
+			        <div class="e-amount__item--wrapper">
+			        	<input type="text" disabled value="56 725 000.00" class="e-amount__item">
+			        </div>
+			        <div class="e-setting__item--wrapper">
+		        		<div class="e-setting__item">
+		        			<i class="icon-pencil e-pencil__icon"></i>
+		        		</div>
+			        </div>
+	        	</div>
+	        	<div class="b-table__lines" data-line="3">
+	        		<div class="e-account__item--wrapper">
+		        		<div class="e-account__item">KZT20101023030123019</div>
+	        		</div>
+		        	<div class="e-icon__item--wrapper">
+		        		<div class="e-icon__item"><i class="icon-lock icon-large"></i></div>
+		        	</div>
+		        	<div class="e-currency__item--wrapper">
+			        	<div class="e-currency__item">KZT</div>
+		        	</div>
+		        	<div class="e-name__item--wrapper">
+			        	<input type="text" disabled value="kazkom" class="e-name__item">
+			        </div>
+			        <div class="e-daily__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-daily__limit__item">
+			        </div>
+			        <div class="e-monthly__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-monthly__limit__item">
+			        </div>
+			        <div class="e-amount__item--wrapper">
+			        	<input type="text" disabled value="56 725 000.00" class="e-amount__item">
+			        </div>
+			        <div class="e-setting__item--wrapper">
+		        		<div class="e-setting__item">
+		        			<i class="icon-pencil e-pencil__icon"></i>
+		        		</div>
+			        </div>
+	        	</div>
+	        	<div class="b-table__lines" data-line="4">
+	        		<div class="e-account__item--wrapper">
+		        		<div class="e-account__item">KZT20101023030123019</div>
+	        		</div>
+		        	<div class="e-icon__item--wrapper">
+		        		<div class="e-icon__item"><i class="icon-lock icon-large"></i></div>
+		        	</div>
+		        	<div class="e-currency__item--wrapper">
+			        	<div class="e-currency__item">KZT</div>
+		        	</div>
+		        	<div class="e-name__item--wrapper">
+			        	<input type="text" disabled value="kazkom" class="e-name__item">
+			        </div>
+			        <div class="e-daily__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-daily__limit__item">
+			        </div>
+			        <div class="e-monthly__limit__item--wrapper">
+			        	<input type="text" disabled value="124" class="e-monthly__limit__item">
+			        </div>
+			        <div class="e-amount__item--wrapper">
+			        	<input type="text" disabled value="56 725 000.00" class="e-amount__item">
+			        </div>
+			        <div class="e-setting__item--wrapper">
+		        		<div class="e-setting__item">
+		        			<i class="icon-pencil e-pencil__icon"></i>
+		        		</div>
+			        </div>
+	        	</div>
+	        </div>
+        </div>
+        
+        <div class="b-table recipients" style="display:none;" data-table="recipients">
+            <div class="b-table__head">
+                <ul class="b-table__head__row">
+                    <li class="e-table__head__check"><input type="checkbox"></li>
+                    <li class="e-table__head__user">Получатель</li>
+                    <li class="e-table__head__status">Статус</li>
+                    <li class="e-table__head__destination">Назначение</li>
+                    <li class="e-table__head__number">Номер счета</li>
+                    <li class="e-table__head__type">Тип</li>
+                    <li class="e-table__head__sum">Сумма</li>
+                    <li class="e-table__head__left">Остаток</li>
+                    <li class="e-table__head__edit"><i class="icon-gear"></i></li>
+                </ul>
+            </div>
+            <div class="b-table__user">
+                <ul class="b-table__user-row">
+                    <li class="e-table__user__check"><input type="checkbox"></li>
+                    <li class="e-table__user__user">Василий Пупкин</li>
+                    <li class="e-table__user__edit"><i class="icon-pencil"></i></li>
+                </ul>
+                <ul class="b-table__row">
+                    <li class="e-table__check"><input type="checkbox"></li>
+                    <li class="e-table__user">+7 777 777 77 77</li>
+                    <li class="e-table__status"><i class="icon-off"></i></li>
+                    <li class="e-table__destination"><i class="icon-envelope-alt"></i></li>
+                    <li class="e-table__number">KZ993261502637771111</li>
+                    <li class="e-table__type">Сумма меньше минимального</li>
+                    <li class="e-table__sum">56 725 000</li>
+                    <li class="e-table__left">100</li>
+                </ul>
+                <ul class="b-table__row">
+                    <li class="e-table__check"><input type="checkbox"></li>
+                    <li class="e-table__user">info@kazkom.kz</li>
+                    <li class="e-table__status active"><i class="icon-off"></i></li>
+                    <li class="e-table__destination active"><i class="icon-envelope-alt"></i></li>
+                    <li class="e-table__number">KZ993261502637771111</li>
+                    <li class="e-table__type">Поступление на счет</li>
+                    <li class="e-table__sum">56 725 000</li>
+                    <li class="e-table__left">250</li>
+                </ul>
+            </div>
+            <div class="b-table__user">
+                <ul class="b-table__user-row">
+                    <li class="e-table__user__check"><input type="checkbox"></li>
+                    <li class="e-table__user__user">Мурат Алибеков</li>
+                    <li class="e-table__user__edit"><i class="icon-pencil"></i></li>
+                </ul>
+                <ul class="b-table__row">
+                    <li class="e-table__check"><input type="checkbox"></li>
+                    <li class="e-table__user">+7 777 777 77 77</li>
+                    <li class="e-table__status"><i class="icon-off"></i></li>
+                    <li class="e-table__destination"><i class="icon-envelope-alt"></i></li>
+                    <li class="e-table__number">KZ993261502637771111</li>
+                    <li class="e-table__type">Сумма меньше минимального</li>
+                    <li class="e-table__sum">56 725 000</li>
+                    <li class="e-table__left">100</li>
+                </ul>
+                <ul class="b-table__row">
+                    <li class="e-table__check"><input type="checkbox"></li>
+                    <li class="e-table__user">info@kazkom.kz</li>
+                    <li class="e-table__status active"><i class="icon-off"></i></li>
+                    <li class="e-table__destination active"><i class="icon-envelope-alt"></i></li>
+                    <li class="e-table__number">KZ993261502637771111</li>
+                    <li class="e-table__type">Поступление на счет</li>
+                    <li class="e-table__sum">56 725 000</li>
+                    <li class="e-table__left">250</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="b-helpicons">
+            <ul class="b-helpicons__list">
+                <li class="b-helpicon">
+                    <a href="#!">
+                        <div class="e-helpicon__img atm"></div>
+                        <span class="e-helpicon__txt">Банкоматы</span>
+                    </a>
+                </li>
+                <li class="b-helpicon">
+                    <a href="#!">
+                        <div class="e-helpicon__img offices"></div>
+                        <span class="e-helpicon__txt">Отделения</span>
+                    </a>
+                </li>
+                <li class="b-helpicon">
+                    <a href="#!">
+                        <div class="e-helpicon__img sms"></div>
+                        <span class="e-helpicon__txt">SMS команды</span>
+                    </a>
+                </li>
+                <li class="b-helpicon">
+                    <a href="#!">
+                        <div class="e-helpicon__img tariff"></div>
+                        <span class="e-helpicon__txt">Тарифы</span>
+                    </a>
+                </li>
+                <li class="b-helpicon">
+                    <a href="#!">
+                        <div class="e-helpicon__img demo"></div>
+                        <span class="e-helpicon__txt">Демонстрация</span>
+                    </a>
+                </li>
+                <li class="b-helpicon">
+                    <a href="#!">
+                        <div class="e-helpicon__img help"></div>
+                        <span class="e-helpicon__txt">Помощь</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="b-banner">
+            <a href="#!"><img class="e-banner" src="img/banner.png" alt=""></a>
+        </div>
+        <div class="b-chat__bank">
+        	<span class="e-chat__title">Сообщение в банк</span>
+        	<div class="b-chat__bank--icons">
+	        	<i class="icon-chevron-up e-icon__chat--up"></i>
+	        	<i class="icon-resize-full e-icon__chat--resize"></i>
+	        	<i class="icon-remove e-icon__chat--times"></i>
+	        </div>
+        </div>
+    </div>
+    <footer>
+        <div class="b-footer__wrapper">
+            <div class="b-footer__column">
+                <span class="b-footer__logo"></span>
+                <div class="b-footer__contact">
+                    <span class="e-contact__title">Техническая поддержка:</span>
+                    <span>
+                        <i class="icon-phone icon-light"></i>
+                        <span class="e-footer__telephone">8 (727) 330 00 30, 8 (727) 258 51 42</span>
+                    </span>
+                    <span>
+                        <i class="icon-skype icon-light"></i>
+                        <span class="e-footer__skype">onlinebank_kkb</span>
+                    </span>
+                    <span>
+                        <i class="icon-envelope-alt icon-light"></i>
+                        <span class="e-footer__mail">support@onlinebank.kz</span>
+                    </span>
+                </div>
+            </div>
+            <div class="b-footer__column">
+                <span class="e-footer__list__title">О проекте</span>
+                <ul class="b-footer__list">
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Подключение</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Обучение</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Документы</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Тарифы</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Вопросы и ответы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="b-footer__column">
+                <span class="e-footer__list__title">Полезное</span>
+                <ul class="b-footer__list">
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Банкоматы</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Отделения</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Сертификат</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i><a href="#!">Драйвер для ЭЦП</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="b-footer__column">
+                <span class="e-footer__list__title">Mobilebank</span>
+                <ul class="b-footer__list">
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i>
+                        <a href="#!">Счета</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i>
+                        <a href="#!">Шаблоны</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i>
+                        <a href="#!">Уведомления</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i>
+                        <a href="#!">Статистика</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i>
+                        <a href="#!">Настройки</a>
+                    </li>
+                    <li class="e-footer__items">
+                        <i class="icon-angle-right icon-large"></i>
+                        <a href="#!">Выход</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="b-footer__column">
+                <span class="e-get__up">
+                    <i class="icon-circle-arrow-up icon-large"></i>Наверх
+                </span>
+            </div>
+            <div class="b-license">
+                <div class="b-license__logo"></div>
+                <span class="b-license__text">Лицензия Агентства РК по регулированию и надзору финансового рынка и финансовых организаций № 48 от 27.12.07</span>
+            </div>
+            <div class="b-copyright">© 1998 — 2013 КАЗКОМ</div>
+
+        </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
